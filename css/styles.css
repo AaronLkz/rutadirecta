@@ -1,10 +1,13 @@
 /* Variables y Reset */
 :root {
   --primary: #25D366; /* Verde WhatsApp */
-  --secondary: #FF6B6B;
-  --dark: #333;
-  --light: #f8f9fa;
-  --gray: #6c757d;
+  --secondary: #1db954; /* Verde acento */
+  --dark: #18191a;
+  --darker: #121212;
+  --light: #23272b;
+  --gray: #b0b3b8;
+  --white: #fff;
+  --shadow: 0 5px 20px rgba(0,0,0,0.25);
 }
 
 * {
@@ -15,8 +18,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--light);
-  color: var(--dark);
+  background-color: var(--darker);
+  color: var(--gray);
   line-height: 1.6;
 }
 
@@ -28,19 +31,21 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, var(--primary), #128C7E);
-  color: white;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
   padding: 2rem 0;
   text-align: center;
+  box-shadow: var(--shadow);
 }
 
 header h1 {
   font-size: 2.5rem;
   font-weight: 700;
+  letter-spacing: 2px;
 }
 
 header h1 span {
-  color: var(--light);
+  color: var(--secondary);
 }
 
 /* Categorías */
@@ -52,26 +57,29 @@ header h1 span {
   text-align: center;
   margin-bottom: 2rem;
   font-size: 2rem;
-  color: var(--dark);
+  color: var(--white);
+  letter-spacing: 1px;
 }
 
 .category-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: white;
-  border-radius: 15px;
+  background: var(--light);
+  border-radius: 18px;
   padding: 1.5rem;
   width: 200px;
   text-decoration: none;
-  color: var(--dark);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  color: var(--white);
+  box-shadow: var(--shadow);
+  border: 1.5px solid var(--dark);
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 }
 
 .category-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(37,211,102,0.15);
+  border: 1.5px solid var(--primary);
 }
 
 .category-card img {
@@ -79,16 +87,19 @@ header h1 span {
   height: 80px;
   object-fit: contain;
   margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 8px rgba(37,211,102,0.08));
 }
 
 .category-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
+  color: var(--primary);
+  letter-spacing: 1px;
 }
 
 .category-card p {
   color: var(--gray);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
 }
 
 /* Carrusel (se puede mover a carousel.css) */
@@ -125,10 +136,13 @@ header h1 span {
 .step {
   flex: 1;
   min-width: 150px;
-  background: white;
+  background: var(--light);
   padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  color: var(--white);
+  border: 1.5px solid var(--dark);
+  margin: 0 0.5rem;
 }
 
 .step span {
@@ -136,36 +150,42 @@ header h1 span {
   width: 40px;
   height: 40px;
   background: var(--primary);
-  color: white;
+  color: var(--white);
   border-radius: 50%;
   font-weight: bold;
   line-height: 40px;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(37,211,102,0.12);
 }
 
 /* Footer */
 footer {
   background: var(--dark);
-  color: white;
+  color: var(--gray);
   text-align: center;
   padding: 2rem 0;
   margin-top: 3rem;
+  border-top: 1.5px solid var(--light);
 }
 
 .cta-button {
   display: inline-block;
-  background: var(--secondary);
-  color: white;
+  background: var(--primary);
+  color: var(--white);
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   text-decoration: none;
   font-weight: bold;
   margin-top: 1rem;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
+  box-shadow: 0 2px 8px rgba(37,211,102,0.10);
+  border: none;
 }
 
 .cta-button:hover {
-  background: #ff5252;
+  background: var(--secondary);
+  color: var(--dark);
 }
 
 /* Responsive */
