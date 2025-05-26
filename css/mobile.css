@@ -26,6 +26,7 @@
     box-shadow: 0 2px 10px rgba(25,118,210,0.10); /* azul sutil */
     border: 1.5px solid var(--primary);
     transition: transform 0.1s, border 0.2s;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .mobile-card:active {
