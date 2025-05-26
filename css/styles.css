@@ -14,6 +14,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(25, 118, 210, 0.15); /* Azul zafiro translúcido */
+  /* O usa transparent si no quieres ningún efecto */
+  /* -webkit-tap-highlight-color: transparent; */
 }
 
 body {
