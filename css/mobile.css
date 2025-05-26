@@ -1,4 +1,3 @@
-/* ========== REGLAS SOLO PARA MÓVILES (≤768px) ========== */
 @media screen and (max-width: 768px) {
   /* Oculta el carrusel EN MÓVILES */
   .carousel {
