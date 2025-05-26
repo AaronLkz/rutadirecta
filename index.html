@@ -3,50 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encargos en [Nombre de tu Pueblo]</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>EncargosPueblo - Pedidos en [Tu Pueblo]</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
 </head>
 <body>
-  <h1>Encargos en [Nombre de tu Pueblo]</h1>
-  <div class="carousel">
-    <div class="carousel-content">
-      <!-- Desayunos -->
-      <div class="card">
-        <img class="icon" src="icons/desayunos.png" alt="Desayunos" />
-        <p>Desayunos</p>
-        <p><a href="desayunos.html">Ver opciones ➞</a></p>
-      </div>
-      <!-- Almuerzos -->
-      <div class="card">
-        <img class="icon" src="icons/almuerzos.png" alt="Almuerzos" />
-        <p>Almuerzos</p>
-        <p><a href="almuerzos.html">Ver opciones ➞</a></p>
-      </div>
-      <!-- Comida Rápida -->
-      <div class="card">
-        <img class="icon" src="icons/comida_rapida.png" alt="Comida Rápida" />
-        <p>Comida Rápida</p>
-        <p><a href="comida_rapida.html">Ver opciones ➞</a></p>
-      </div>
-      <!-- Bebidas -->
-      <div class="card">
-        <img class="icon" src="icons/bebidas.png" alt="Bebidas" />
-        <p>Bebidas</p>
-        <p><a href="bebidas.html">Ver opciones ➞</a></p>
-      </div>
-      <!-- Medicinas -->
-      <div class="card">
-        <img class="icon" src="icons/medicinas.png" alt="Medicinas" />
-        <p>Medicinas</p>
-        <p><a href="medicinas.html">Ver opciones ➞</a></p>
-      </div>
+  <header>
+    <div class="container">
+      <h1>Encargos<span>Pueblo</span></h1>
+      <p>Pide todo lo que necesites directamente a los locales</p>
     </div>
-  </div>
+  </header>
+
+  <main class="container">
+    <section class="categories">
+      <h2>¿Qué quieres pedir hoy?</h2>
+      <div class="carousel">
+        <div class="carousel-content">
+          <!-- Desayunos -->
+          <a href="categorias/desayunos.html" class="category-card">
+            <img src="assets/icons/desayuno.png" alt="Desayunos">
+            <h3>Desayunos</h3>
+            <p>Desde $30</p>
+          </a>
+          <!-- Almuerzos -->
+          <a href="categorias/almuerzos.html" class="category-card">
+            <img src="assets/icons/almuerzo.png" alt="Almuerzos">
+            <h3>Almuerzos</h3>
+            <p>Desde $50</p>
+          </a>
+          <!-- Comida Rápida -->
+          <a href="categorias/comida-rapida.html" class="category-card">
+            <img src="assets/icons/hamburguesa.png" alt="Comida Rápida">
+            <h3>Comida Rápida</h3>
+            <p>Desde $40</p>
+          </a>
+          <!-- Bebidas -->
+          <a href="categorias/bebidas.html" class="category-card">
+            <img src="assets/icons/bebida.png" alt="Bebidas">
+            <h3>Bebidas</h3>
+            <p>Desde $15</p>
+          </a>
+          <!-- Medicinas -->
+          <a href="categorias/farmacias.html" class="category-card">
+            <img src="assets/icons/medicina.png" alt="Farmacias">
+            <h3>Farmacias</h3>
+            <p>Encarga medicamentos</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <h2>¿Cómo funciona?</h2>
+      <div class="steps">
+        <div class="step">
+          <span>1</span>
+          <p>Elige una categoría</p>
+        </div>
+        <div class="step">
+          <span>2</span>
+          <p>Selecciona un local</p>
+        </div>
+        <div class="step">
+          <span>3</span>
+          <p>Habla por WhatsApp</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2024 Encargos [Nombre de tu Pueblo]</p>
+    <div class="container">
+      <p>© 2024 EncargosPueblo - [Nombre de tu Pueblo]</p>
+      <a href="#" class="cta-button">¿Eres un local? Únete aquí</a>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
