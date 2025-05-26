@@ -25,9 +25,11 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 /* Header */
@@ -116,6 +118,7 @@ header h1 span {
   display: flex;
   gap: 1.5rem;
   padding-bottom: 1rem;
+  justify-content: center; /* Centra el contenido horizontalmente */
 }
 
 /* Cómo funciona */
