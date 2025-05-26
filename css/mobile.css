@@ -1,68 +1,93 @@
-/* Oculta el carrusel en móviles */
-.carousel {
-  display: none;
+/* ========== REGLAS SOLO PARA MÓVILES (≤768px) ========== */
+@media screen and (max-width: 768px) {
+  /* Oculta el carrusel EN MÓVILES */
+  .carousel {
+    display: none;
+  }
+
+  /* Grid de categorías SOLO EN MÓVILES */
+  .mobile-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    padding: 0 12px;
+    margin: 20px 0;
+  }
+
+  /* Estilos de tarjetas móviles */
+  .mobile-card {
+    background: white;
+    border-radius: 10px;
+    padding: 16px 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.1s;
+  }
+
+  .mobile-card:active {
+    transform: scale(0.96);
+    background: #f9f9f9;
+  }
+
+  .mobile-card img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .mobile-card h3 {
+    font-size: 14px;
+    margin-bottom: 4px;
+    text-align: center;
+  }
+
+  .mobile-card p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+  }
+
+  /* Pasos en columna SOLO EN MÓVILES */
+  .steps {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .step {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Botón CTA optimizado para móviles */
+  .cta-button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  /* Dark mode para móviles */
+  @media (prefers-color-scheme: dark) {
+    .mobile-card {
+      background: #1e1e1e;
+      color: #eee;
+    }
+  }
 }
 
-/* Grid de categorías para móviles */
-.mobile-categories {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  padding: 0 12px;
-  margin: 20px 0;
-}
-
-.mobile-card {
-  background: white;
-  border-radius: 10px;
-  padding: 16px 8px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-decoration: none;
-  color: #333;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  transition: transform 0.1s;
-}
-
-.mobile-card:active {
-  transform: scale(0.96);
-  background: #f9f9f9;
-}
-
-.mobile-card img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 8px;
-}
-
-.mobile-card h3 {
-  font-size: 14px;
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.mobile-card p {
-  font-size: 12px;
-  color: #666;
-  text-align: center;
-}
-
-/* Pasos en columna */
-.steps {
-  flex-direction: column;
-  gap: 15px;
-}
-
-.step {
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-/* Botón CTA optimizado */
-.cta-button {
-  padding: 12px;
-  font-size: 14px;
+/* ========== REGLAS PARA ESCRITORIO (>768px) ========== */
+@media screen and (min-width: 769px) {
+  /* Asegura que el grid móvil esté OCULTO en desktop */
+  .mobile-categories {
+    display: none !important;
+  }
+  
+  /* Asegura que los pasos vuelvan a fila en desktop */
+  .steps {
+    flex-direction: row !important;
+  }
 }
 
 /* Botón flotante de WhatsApp */
@@ -83,12 +108,4 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-}
-
-/* Dark mode opcional */
-@media (prefers-color-scheme: dark) {
-  .mobile-card {
-    background: #1e1e1e;
-    color: #eee;
-  }
 }
