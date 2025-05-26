@@ -5,12 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.mobile-card').forEach(card => {
       card.addEventListener('touchstart', function() {
         this.style.transform = 'scale(0.96)';
-        this.style.backgroundColor = '#f9f9f9';
+        this.style.backgroundColor = 'var(--dark)'; // Usa el color oscuro
       });
       
       card.addEventListener('touchend', function() {
         this.style.transform = 'scale(1)';
-        this.style.backgroundColor = 'white';
+        this.style.backgroundColor = 'var(--light)'; // Vuelve al color original
       });
     });
 
