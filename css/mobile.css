@@ -71,10 +71,11 @@
   /* Dark mode para móviles */
   @media (prefers-color-scheme: dark) {
     .mobile-card {
-      background: white;
-      color: #333;
+      background: #1e1e1e;
+      color: #eee;
     }
   }
+}
 
 /* ========== REGLAS PARA ESCRITORIO (>768px) ========== */
 @media screen and (min-width: 769px) {
