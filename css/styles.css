@@ -99,6 +99,11 @@ header h1 span {
   letter-spacing: 1px;
 }
 
+.category-card h3,
+.category-card p {
+  text-align: center;
+}
+
 .category-card p {
   color: var(--gray);
 }
