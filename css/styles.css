@@ -1,9 +1,9 @@
 /* Variables y Reset */
 :root {
-  --primary: #25D366; /* Verde WhatsApp */
-  --secondary: #1db954; /* Verde acento */
+  --primary: #1976D2;   /* Azul zafiro elegante */
+  --secondary: #64B5F6; /* Azul claro sofisticado */
   --dark: #18191a;
-  --darker: #121212;
+  --darker: #111215;
   --light: #23272b;
   --gray: #b0b3b8;
   --white: #fff;
@@ -31,7 +31,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: linear-gradient(135deg, var(--darker) 60%, var(--primary) 100%);
   color: var(--white);
   padding: 2rem 0;
   text-align: center;
@@ -45,7 +45,11 @@ header h1 {
 }
 
 header h1 span {
-  color: var(--secondary);
+  color: var(--primary);
+  background: none;
+  padding: 0 6px;
+  border-radius: 6px;
+  /* Asegura contraste y visibilidad */
 }
 
 /* Categorías */
@@ -62,9 +66,6 @@ header h1 span {
 }
 
 .category-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: var(--light);
   border-radius: 18px;
   padding: 1.5rem;
@@ -72,14 +73,14 @@ header h1 span {
   text-decoration: none;
   color: var(--white);
   box-shadow: var(--shadow);
-  border: 1.5px solid var(--dark);
+  border: 1.5px solid var(--primary);
   transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
 }
 
 .category-card:hover {
   transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 15px 40px rgba(37,211,102,0.15);
-  border: 1.5px solid var(--primary);
+  box-shadow: 0 15px 40px rgba(25, 118, 210, 0.18);
+  border: 1.5px solid var(--secondary);
 }
 
 .category-card img {
@@ -91,15 +92,12 @@ header h1 span {
 }
 
 .category-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
   color: var(--primary);
   letter-spacing: 1px;
 }
 
 .category-card p {
   color: var(--gray);
-  font-size: 0.95rem;
 }
 
 /* Carrusel (se puede mover a carousel.css) */
@@ -134,14 +132,14 @@ header h1 span {
 }
 
 .step {
+  background: var(--light);
+  color: var(--white);
+  border: 1.5px solid var(--primary);
   flex: 1;
   min-width: 150px;
-  background: var(--light);
   padding: 1.5rem;
   border-radius: 12px;
   box-shadow: var(--shadow);
-  color: var(--white);
-  border: 1.5px solid var(--dark);
   margin: 0 0.5rem;
 }
 
@@ -156,7 +154,7 @@ header h1 span {
   line-height: 40px;
   margin-bottom: 1rem;
   font-size: 1.2rem;
-  box-shadow: 0 2px 8px rgba(37,211,102,0.12);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.12);
 }
 
 /* Footer */
@@ -173,6 +171,7 @@ footer {
   display: inline-block;
   background: var(--primary);
   color: var(--white);
+  border: none;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
   text-decoration: none;
@@ -180,7 +179,6 @@ footer {
   margin-top: 1rem;
   transition: background 0.3s, color 0.3s;
   box-shadow: 0 2px 8px rgba(37,211,102,0.10);
-  border: none;
 }
 
 .cta-button:hover {
