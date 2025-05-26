@@ -1,5 +1,8 @@
-/* ========== REGLAS SOLO PARA MÓVILES (≤768px) ========== */
-@media screen and (max-width: 769px) {
+@media screen and (min-width: 769px) {
+  .mobile-categories {
+    display: none !important;
+  }
+}
   /* Oculta el carrusel EN MÓVILES */
   .carousel {
     display: none;
