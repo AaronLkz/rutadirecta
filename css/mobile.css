@@ -1,0 +1,48 @@
+/* Pantallas menores a 768px */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    padding: 1.5rem 0;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Carrusel → Grid */
+  .mobile-categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .category-card {
+    width: 100% !important;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .category-card img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  /* Botones táctiles */
+  a, button {
+    min-height: 48px; /* Tamaño táctil recomendado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Textos */
+  h2, h3, p {
+    word-break: break-word;
+  }
+
+  /* Efecto táctil */
+  .category-card:active {
+    transform: scale(0.95);
+  }
+}
