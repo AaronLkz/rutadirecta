@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+	--bg-primary-color: #eee;
+	--bg-secondary-color: #ddd;
+	--card-color: #fff;
+	--card-border-color: #aaa;
+	--card-hover-border-color: #fa0;
+	--card-hover-glow-color: #fa07;
+	--card-shadow-color: #0002;
+	--link-color: #f80;
+	--link-visited-color: #e70;
+	--link-hover-color: #fb7;
+	--link-focus-color: #fa4;
+	--footer-text-color: #aaa;
+}
+
+/* Adjust Colors for Dark Themes */
+@media screen and (prefers-color-scheme: dark) {
+	:root {
+		--bg-primary-color: #141414;
+		--bg-secondary-color: #1f1f1f;
+		--card-color: #3b3b3b;
+		--card-border-color: #292929;
+		--card-shadow-color: #0009;
+		--footer-text-color: #777;
+	}
+
+	body {
+		color: #fff;
+	}
+
+	.icon {
+		filter: invert();
+	}
+}
+
+body {
+	margin: 0;
+	padding: 3rem 0;
+	font-family: "Quicksand", sans-serif;
+	background-color: #eee;
+	background: repeating-linear-gradient(
+			-45deg,
+			var(--bg-primary-color) 0% 4%,
+			#0000 4% 5%
+		),
+		repeating-linear-gradient(
+			45deg,
+			var(--bg-primary-color) 0% 4%,
+			var(--bg-secondary-color) 4% 5%
+		);
+	background-color: var(--bg-primary-color);
+}
+
+h1 {
+	margin: 12px 0;
+	text-align: center;
+}
+
+p {
+	margin: 12px 0;
+}
+
+a {
+	color: var(--link-color);
+	font-weight: bold;
+	transition: color 0.15s;
+}
+a:visited {
+	color: var(--link-visited-color);
+}
+a:focus {
+	color: var(--link-focus-color);
+	outline: none;
+}
+a:hover {
+	color: var(--link-hover-color);
+}
+a:active {
+	color: var(--link-visited-color);
+}
+
+.carousel {
+	display: flex;
+	gap: 1rem;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1rem;
+	/* Hide the overflow so we can program scrolling. */
+	overflow-x: hidden;
+	mask-image: linear-gradient(
+		90deg,
+		#0000 0% 1%,
+		#0004 1% 2%,
+		#000b 2% 4%,
+		#000 4% 96%,
+		#000b 96% 98%,
+		#0004 98% 99%,
+		#0000 99% 100%
+	);
+}
+.carousel:focus {
+	/* Get rid of a random focus outline. */
+	outline: none;
+}
+.carousel:hover {
+	cursor: grab;
+}
+.carousel:active {
+	cursor: grabbing;
+}
+
+.carousel-content {
+	display: flex;
+	gap: 1rem;
+}
+
+.card {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 270px;
+	background-color: var(--card-color);
+	border: 2px solid var(--card-border-color);
+	border-radius: 1rem;
+	box-shadow: 0 2px 0 2px var(--card-shadow-color), 0 0 0 3px #0000;
+	font-size: 1.5rem;
+	text-align: center;
+	-webkit-user-select: none;
+	user-select: none;
+	transition: border 0.667s, box-shadow 0.333s;
+}
+
+.card:hover,
+.card:focus-within {
+	border: 2px solid var(--card-hover-border-color);
+	box-shadow: 2px 4px 0 #0000, 0 0 0 6px var(--card-hover-glow-color);
+}
+
+.icon {
+	display: block;
+	height: 120px;
+	pointer-events: none;
+}
