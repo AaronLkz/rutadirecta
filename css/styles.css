@@ -186,6 +186,12 @@ footer {
   color: var(--dark);
 }
 
+/* Color de selección personalizado */
+::selection {
+  background: rgba(25, 118, 210, 0.25); /* Azul zafiro translúcido */
+  color: var(--white);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .steps {
