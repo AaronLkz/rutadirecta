@@ -77,15 +77,20 @@ body {
 
   /* Pasos en columna SOLO EN MÓVILES */
   .steps {
+    width: 100%;
     flex-direction: column;
     gap: 15px;
-    align-items: center; /* <-- Esto centra los pasos en columna */
+    align-items: center;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .step {
     width: 100%;
-    max-width: 340px; /* Opcional: limita el ancho para que no sean demasiado anchos */
-    margin-bottom: 10px;
+    max-width: 340px;
+    margin: 0 0 10px 0; /* Solo margen inferior */
   }
 
   /* Botón CTA optimizado para móviles */
