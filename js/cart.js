@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Obtén el elemento aquí:
     const cartTotal = document.getElementById('cart-total');
     msg += cartTotal.textContent ? `\n${cartTotal.textContent}` : '';
-    const url = `https://wa.me/?text=${encodeURIComponent(msg)}`;
+    const url = `https://api.whatsapp.com/send?phone=+593991930724&text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   });
 
