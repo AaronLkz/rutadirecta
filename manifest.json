@@ -1,0 +1,9 @@
+{
+  "display_override": [
+    "fullscreen",
+    "browser",
+    "window-controls-overlay",
+    "minimal-ui",
+    "standalone"
+  ]
+}
