@@ -110,20 +110,17 @@ header h1 span {
 
 /* Carrusel (se puede mover a carousel.css) */
 .carousel {
-  overflow-x: auto;
-  padding: 1rem 0;
-  scrollbar-width: none; /* Firefox */
-}
-
-.carousel::-webkit-scrollbar {
-  display: none; /* Chrome/Safari */
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .carousel-content {
   display: flex;
   gap: 1.5rem;
   padding-bottom: 1rem;
-  justify-content: center; /* Centra el contenido horizontalmente */
+  justify-content: center;
+  width: 100%;
 }
 
 /* Cómo funciona */
