@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruta Directa - Desayunos</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/mobile.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+      body {
+        background: var(--darker);
+      }
+      .category-header {
+        background: linear-gradient(135deg, var(--darker) 60%, var(--primary) 100%);
+        color: var(--white);
+        padding: 2.5rem 0 1.5rem 0;
+        text-align: center;
+        box-shadow: var(--shadow);
+        margin-bottom: 2rem;
+      }
+      .category-header h1 {
+        font-size: 2.3rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        margin-bottom: 0.5rem;
+      }
+      .category-header h1 span {
+        color: var(--primary);
+        background: none;
+        padding: 0 6px;
+        border-radius: 6px;
+      }
+      .category-header p {
+        color: var(--gray);
+        font-size: 1.2rem;
+        margin-bottom: 0;
+      }
+      .menu-ctn {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1100px;
+        padding-bottom: 2rem;
+      }
+      .food-item-card {
+        background: var(--light);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+        padding: 1.5rem 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1.5px solid var(--primary);
+        transition: transform 0.2s, box-shadow 0.2s;
+        text-align: center;
+      }
+      .food-item-card:hover {
+        transform: translateY(-8px) scale(1.03);
+        box-shadow: 0 10px 32px rgba(25, 118, 210, 0.13);
+        border: 1.5px solid var(--secondary);
+      }
+      .food-img-ctn {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+      .food-img-ctn img {
+        max-width: 120px;
+        max-height: 90px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+      }
+      .food-desc-ctn {
+        width: 100%;
+        text-align: center;
+      }
+      .food-name {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.2rem;
+        margin-bottom: 0.3rem;
+        text-align: center;
+      }
+      .food-price {
+        color: var(--secondary);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        display: block;
+        text-align: center;
+      }
+      .food-desc-ctn .desc {
+        color: var(--gray);
+        font-size: 0.98rem;
+        margin-bottom: 0.5rem;
+      }
+      @media (max-width: 768px) {
+        .menu-ctn {
+          grid-template-columns: 1fr;
+          gap: 1.2rem;
+          padding: 0 0.5rem 2rem 0.5rem;
+        }
+        .food-item-card {
+          padding: 1.2rem 0.5rem;
+        }
+      }
+    </style>
+</head>
+<body>
+    <header class="category-header">
+        <h1><span>Ruta</span>Directa</h1>
+        <p>El mejor desayuno para que comiences tu día</p>
+    </header>
+
+    <main>
+        <div class="menu-ctn">
+            <!-- Ejemplo de productos -->
+            <article class="food-item-card">
+              <div class="food-img-ctn">
+                <img src="../../assets/icons/desayuno.png" alt="Tostadas con café">
+              </div>
+              <div class="food-desc-ctn">
+                <div class="food-name">Tostadas con café</div>
+                <span class="food-price">$30</span>
+                <div class="desc">
+                  Pan tostado con mantequilla y café recién hecho.
+                </div>
+              </div>
+            </article>
+            <article class="food-item-card">
+              <div class="food-img-ctn">
+                <img src="../../assets/icons/desayuno.png" alt="Omelette de jamón">
+              </div>
+              <div class="food-desc-ctn">
+                <div class="food-name">Omelette de jamón</div>
+                <span class="food-price">$35</span>
+                <div class="desc">
+                  Omelette de huevos frescos con jamón y queso.
+                </div>
+              </div>
+            </article>
+            <article class="food-item-card">
+              <div class="food-img-ctn">
+                <img src="../../assets/icons/desayuno.png" alt="Bolón con café">
+              </div>
+              <div class="food-desc-ctn">
+                <div class="food-name">Bolón con café</div>
+                <span class="food-price">$32</span>
+                <div class="desc">
+                  Bolón de verde con queso acompañado de café.
+                </div>
+              </div>
+            </article>
+            <article class="food-item-card">
+              <div class="food-img-ctn">
+                <img src="../../assets/icons/desayuno.png" alt="Encebollado">
+              </div>
+              <div class="food-desc-ctn">
+                <div class="food-name">Encebollado</div>
+                <span class="food-price">$40</span>
+                <div class="desc">
+                  Tradicional encebollado ecuatoriano con yuca y pescado.
+                </div>
+              </div>
+            </article>
+            <article class="food-item-card">
+              <div class="food-img-ctn">
+                <img src="../../assets/icons/desayuno.png" alt="Empanadas de viento">
+              </div>
+              <div class="food-desc-ctn">
+                <div class="food-name">Empanadas de viento</div>
+                <span class="food-price">$28</span>
+                <div class="desc">
+                  Empanadas rellenas de queso, espolvoreadas con azúcar.
+                </div>
+              </div>
+            </article>
+            <!-- Más productos aquí -->
+        </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 RutaDirecta - Buena Fe</p>
+        <a href="#" class="cta-button">¿Eres un local? Únete aquí</a>
+      </div>
+    </footer>
+</body>
+</html>
