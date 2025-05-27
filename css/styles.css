@@ -238,3 +238,9 @@ footer {
     width: 160px;
   }
 }
+
+.category-header p {
+  color: var(--white) !important;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
