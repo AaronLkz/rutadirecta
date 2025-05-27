@@ -6,6 +6,7 @@
     <title>Ruta Directa - Desayunos</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <link rel="stylesheet" href="../../css/mobile.css">
+    <link rel="stylesheet" href="../../css/cart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -122,7 +123,7 @@
     <main>
         <div class="menu-ctn">
             <!-- Ejemplo de productos -->
-            <article class="food-item-card">
+            <article class="food-item-card" data-name="Tostadas con café" data-price="30">
               <div class="food-img-ctn">
                 <img src="../../assets/icons/desayuno.png" alt="Tostadas con café">
               </div>
@@ -132,9 +133,12 @@
                 <div class="desc">
                   Pan tostado con mantequilla y café recién hecho.
                 </div>
+                <button class="add-to-cart-btn">
+                  <i class="fa fa-cart-plus"></i> Añadir al carrito
+                </button>
               </div>
             </article>
-            <article class="food-item-card">
+            <article class="food-item-card" data-name="Omelette de jamón" data-price="35">
               <div class="food-img-ctn">
                 <img src="../../assets/icons/desayuno.png" alt="Omelette de jamón">
               </div>
@@ -144,9 +148,12 @@
                 <div class="desc">
                   Omelette de huevos frescos con jamón y queso.
                 </div>
+                <button class="add-to-cart-btn">
+                  <i class="fa fa-cart-plus"></i> Añadir al carrito
+                </button>
               </div>
             </article>
-            <article class="food-item-card">
+            <article class="food-item-card" data-name="Bolón con café" data-price="32">
               <div class="food-img-ctn">
                 <img src="../../assets/icons/desayuno.png" alt="Bolón con café">
               </div>
@@ -156,9 +163,12 @@
                 <div class="desc">
                   Bolón de verde con queso acompañado de café.
                 </div>
+                <button class="add-to-cart-btn">
+                  <i class="fa fa-cart-plus"></i> Añadir al carrito
+                </button>
               </div>
             </article>
-            <article class="food-item-card">
+            <article class="food-item-card" data-name="Encebollado" data-price="40">
               <div class="food-img-ctn">
                 <img src="../../assets/icons/desayuno.png" alt="Encebollado">
               </div>
@@ -168,9 +178,12 @@
                 <div class="desc">
                   Tradicional encebollado ecuatoriano con yuca y pescado.
                 </div>
+                <button class="add-to-cart-btn">
+                  <i class="fa fa-cart-plus"></i> Añadir al carrito
+                </button>
               </div>
             </article>
-            <article class="food-item-card">
+            <article class="food-item-card" data-name="Empanadas de viento" data-price="28">
               <div class="food-img-ctn">
                 <img src="../../assets/icons/desayuno.png" alt="Empanadas de viento">
               </div>
@@ -180,11 +193,34 @@
                 <div class="desc">
                   Empanadas rellenas de queso, espolvoreadas con azúcar.
                 </div>
+                <button class="add-to-cart-btn">
+                  <i class="fa fa-cart-plus"></i> Añadir al carrito
+                </button>
               </div>
             </article>
             <!-- Más productos aquí -->
         </div>
     </main>
+
+    <!-- Carrito flotante -->
+    <div class="cart-float" id="cart-float">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="cart-modal-bg" id="cart-modal-bg">
+      <div class="cart-modal">
+        <button class="close-cart" id="close-cart" title="Cerrar">&times;</button>
+        <h2>Tu carrito</h2>
+        <ul id="cart-list"></ul>
+        <div class="cart-total" id="cart-total"></div>
+        <div class="cart-btns">
+          <button id="clear-cart">Vaciar carrito</button>
+          <button id="checkout-cart">Finalizar pedido</button>
+        </div>
+      </div>
+    </div>
 
     <footer>
       <div class="container">
@@ -192,5 +228,6 @@
         <a href="#" class="cta-button">¿Eres un local? Únete aquí</a>
       </div>
     </footer>
+    <script src="../../js/cart.js"></script>
 </body>
 </html>

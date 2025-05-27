@@ -1,0 +1,140 @@
+.cart-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(25,118,210,0.18);
+  cursor: pointer;
+  z-index: 2000;
+  font-size: 1.7rem;
+  transition: background 0.2s;
+}
+.cart-float:hover {
+  background: var(--secondary);
+}
+.cart-count {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #fff;
+  color: var(--primary);
+  border-radius: 50%;
+  font-size: 0.95rem;
+  font-weight: bold;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+.cart-modal-bg {
+  display: none;
+  position: fixed;
+  z-index: 2100;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.25);
+  justify-content: center;
+  align-items: center;
+}
+.cart-modal {
+  background: var(--light);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(25,118,210,0.18);
+  padding: 2rem 1.2rem 1.2rem 1.2rem;
+  width: 95vw;
+  max-width: 370px;
+  color: var(--darker);
+  position: relative;
+  text-align: center;
+}
+.cart-modal h2 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+.cart-modal ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  max-height: 220px;
+  overflow-y: auto;
+  text-align: left;
+}
+.cart-modal li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.3rem;
+}
+.cart-modal .cart-total {
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: right;
+}
+.cart-modal .cart-btns {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.cart-modal button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cart-modal button:hover {
+  background: var(--secondary);
+}
+.cart-modal .close-cart {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  background: none;
+  color: var(--primary);
+  font-size: 1.3rem;
+  border: none;
+  cursor: pointer;
+}
+.add-to-cart-btn {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.7rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.add-to-cart-btn:hover, .add-to-cart-btn.added {
+  background: var(--secondary);
+}
+.add-to-cart-btn i {
+  font-size: 1.1rem;
+}
+@media (max-width: 600px) {
+  .cart-modal { max-width: 98vw; }
+  .cart-float { right: 16px; bottom: 16px; }
+}
