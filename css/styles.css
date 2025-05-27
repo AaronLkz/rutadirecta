@@ -55,6 +55,31 @@ header h1 span {
   /* Asegura contraste y visibilidad */
 }
 
+/* Encabezado principal (nuevo) */
+.category-header .main-title-link,
+.category-header .main-title-link h1,
+.category-header .main-title-link h1 span {
+  color: var(--white) !important;
+}
+
+.category-header .main-title-link h1 span {
+  color: var(--primary) !important;
+}
+
+.category-header .main-title-link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Efecto de opacidad en el título principal */
+.main-title-link h1 {
+  transition: opacity 0.2s;
+}
+
+.main-title-link:hover h1 {
+  opacity: 0.7;
+}
+
 /* Categorías */
 .categories {
   padding: 3rem 0;
