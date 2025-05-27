@@ -79,10 +79,12 @@ body {
   .steps {
     flex-direction: column;
     gap: 15px;
+    align-items: center; /* <-- Esto centra los pasos en columna */
   }
 
   .step {
     width: 100%;
+    max-width: 340px; /* Opcional: limita el ancho para que no sean demasiado anchos */
     margin-bottom: 10px;
   }
 
