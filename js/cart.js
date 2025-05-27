@@ -10,12 +10,21 @@ function updateCartUI() {
     total += item.price * item.qty;
     const li = document.createElement('li');
     li.innerHTML = `
-      <span>
-        <img src="${item.img}" alt="" style="width:28px;height:28px;border-radius:50%;margin-right:8px;vertical-align:middle;">
-        ${item.name} <b>x${item.qty}</b>
-      </span>
-      <span>$${item.price * item.qty}</span>
-      <button class="remove-cart-item" data-idx="${idx}" title="Eliminar">&#128465;</button>
+      <div class="cart-item-img">
+        <img src="${item.img}" alt="">
+      </div>
+      <div class="cart-item-details">
+        <div class="cart-item-row">
+          <span class="cart-item-name" title="${item.name}">${item.name}</span>
+          <span style="display:flex;align-items:center;gap:0.5rem;">
+            <span class="cart-item-qty">x${item.qty}</span>
+            <button class="remove-cart-item" data-idx="${idx}" title="Eliminar">&#128465;</button>
+          </span>
+        </div>
+        <div class="cart-item-row">
+          <span class="cart-item-price">$${item.price * item.qty}</span>
+        </div>
+      </div>
     `;
     cartList.appendChild(li);
   });
