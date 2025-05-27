@@ -9,119 +9,17 @@
     <link rel="stylesheet" href="../../css/cart.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-      body {
-        background: var(--darker);
-      }
-      .category-header {
-        background: linear-gradient(135deg, var(--darker) 60%, var(--primary) 100%);
-        color: var(--white);
-        padding: 2.5rem 0 1.5rem 0;
-        text-align: center;
-        box-shadow: var(--shadow);
-        margin-bottom: 2rem;
-      }
-      .category-header h1 {
-        font-size: 2.3rem;
-        font-weight: 700;
-        letter-spacing: 2px;
-        margin-bottom: 0.5rem;
-      }
-      .category-header h1 span {
-        color: var(--primary);
-        background: none;
-        padding: 0 6px;
-        border-radius: 6px;
-      }
-      .category-header p {
-        color: var(--gray);
-        font-size: 1.2rem;
-        margin-bottom: 0;
-      }
-      .menu-ctn {
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 1100px;
-        padding-bottom: 2rem;
-      }
-      .food-item-card {
-        background: var(--light);
-        border-radius: 16px;
-        box-shadow: var(--shadow);
-        padding: 1.5rem 1.2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border: 1.5px solid var(--primary);
-        transition: transform 0.2s, box-shadow 0.2s;
-        text-align: center;
-      }
-      .food-item-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 10px 32px rgba(25, 118, 210, 0.13);
-        border: 1.5px solid var(--secondary);
-      }
-      .food-img-ctn {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 1rem;
-      }
-      .food-img-ctn img {
-        max-width: 120px;
-        max-height: 90px;
-        object-fit: cover;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(25,118,210,0.10);
-      }
-      .food-desc-ctn {
-        width: 100%;
-        text-align: center;
-      }
-      .food-name {
-        color: var(--primary);
-        font-weight: 700;
-        font-size: 1.2rem;
-        margin-bottom: 0.3rem;
-        text-align: center;
-      }
-      .food-price {
-        color: var(--secondary);
-        font-weight: 700;
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
-        display: block;
-        text-align: center;
-      }
-      .food-desc-ctn .desc {
-        color: var(--gray);
-        font-size: 0.98rem;
-        margin-bottom: 0.5rem;
-      }
-      @media (max-width: 768px) {
-        .menu-ctn {
-          grid-template-columns: 1fr;
-          gap: 1.2rem;
-          padding: 0 0.5rem 2rem 0.5rem;
-        }
-        .food-item-card {
-          padding: 1.2rem 0.5rem;
-        }
-      }
-    </style>
 </head>
 <body>
     <header class="category-header">
-        <a href="../../index.html" class="main-title-link" style="text-decoration:none;">
-          <h1>
-            <span>Ruta</span>Directa
-          </h1>
-        </a>
+      <div class="container">
+        <h1>
+          <a href="../../index.html" class="main-title-link" style="text-decoration:none;">
+            Ruta<span>Directa</span>
+          </a>
+        </h1>
         <p>El mejor desayuno para que comiences tu día</p>
+      </div>
     </header>
 
     <main>

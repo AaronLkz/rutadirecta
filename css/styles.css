@@ -32,13 +32,13 @@ body {
   padding-right: 24px;
 }
 
-/* Header */
-header {
+.category-header {
   background: linear-gradient(135deg, var(--darker) 60%, var(--primary) 100%);
   color: var(--white);
-  padding: 2rem 0;
+  padding: 2.5rem 0 1.5rem 0;
   text-align: center;
   box-shadow: var(--shadow);
+  margin-bottom: 2rem;
 }
 
 header h1 {
@@ -69,6 +69,13 @@ header h1 span {
 .category-header .main-title-link {
   text-decoration: none;
   display: inline-block;
+  transition: opacity 0.2s, text-decoration 0.2s;
+}
+
+.category-header .main-title-link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /* Efecto de opacidad en el título principal */
@@ -228,6 +235,80 @@ footer {
   color: var(--white);
 }
 
+/* Menu y Platos */
+.menu-ctn {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-bottom: 2rem;
+}
+
+.food-item-card {
+  background: var(--light);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid var(--primary);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.food-item-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 32px rgba(25, 118, 210, 0.13);
+  border: 1.5px solid var(--secondary);
+}
+
+.food-img-ctn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.food-img-ctn img {
+  max-width: 120px;
+  max-height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+}
+
+.food-desc-ctn {
+  width: 100%;
+  text-align: center;
+}
+
+.food-name {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.food-price {
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
+.food-desc-ctn .desc {
+  color: var(--gray);
+  font-size: 0.98rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .steps {
@@ -236,6 +317,15 @@ footer {
   
   .category-card {
     width: 160px;
+  }
+
+  .menu-ctn {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 0.5rem 2rem 0.5rem;
+  }
+  .food-item-card {
+    padding: 1.2rem 0.5rem;
   }
 }
 
