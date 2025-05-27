@@ -87,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     cart.forEach(item => {
       msg += `- ${item.name} x${item.qty} ($${item.price * item.qty})\n`;
     });
+    // Obtén el elemento aquí:
+    const cartTotal = document.getElementById('cart-total');
     msg += cartTotal.textContent ? `\n${cartTotal.textContent}` : '';
     const url = `https://wa.me/?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');

@@ -77,6 +77,10 @@
   border-bottom: 1px solid #eee;
   padding-bottom: 0.3rem;
 }
+.cart-modal li span {
+  color: var(--primary);
+  font-weight: 600;
+}
 .cart-modal .cart-total {
   font-weight: bold;
   color: var(--primary);
