@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planes RutaDirecta</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <link rel="stylesheet" href="../../css/mobile.css">
+  <link rel="stylesheet" href="../../css/cart.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #1976d2;         /* Azul principal */
+      --primary-dark: #115293;    /* Azul oscuro */
+      --secondary: #25D366;       /* Verde WhatsApp (puedes cambiar si quieres otro secundario) */
+      --dark: #141414;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--dark);
+      color: white;
+      line-height: 1.6;
+    }
+
+    .plans-header {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/bg-plans.jpg') center/cover;
+    }
+
+    .plans-header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .plans-header p {
+      max-width: 600px;
+      margin: 0 auto;
+      color: #ccc;
+    }
+
+    .plans-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .plan-card {
+      background: #1f1f1f;
+      border-radius: 10px;
+      width: 300px;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .plan-badge {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: var(--secondary);
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 0.8rem;
+      font-weight: bold;
+      border-bottom-left-radius: 10px;
+    }
+
+    .plan-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    .plan-price {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .plan-price span {
+      font-size: 1rem;
+      color: #aaa;
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .plan-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #333;
+      display: flex;
+      align-items: center;
+    }
+
+    .plan-features li:before {
+      content: "✓";
+      color: var(--primary);
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    .plan-button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .plan-button:hover {
+      background: var(--primary-dark);
+    }
+
+    .basic .plan-title { color: #aaa; }
+    .basic .plan-button { background: #555; }
+    .basic .plan-button:hover { background: #666; }
+
+    .premium .plan-title { color: var(--primary); }
+
+    .enterprise .plan-title { color: gold; }
+    .enterprise .plan-button { background: gold; color: #333; }
+    .enterprise .plan-button:hover { background: #ffd700; }
+
+    .plan-comparison {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 1rem;
+      overflow-x: auto;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th, .comparison-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #333;
+    }
+
+    .comparison-table th {
+      background: #222;
+      color: var(--primary);
+    }
+
+    .comparison-table tr:hover {
+      background: #252525;
+    }
+
+    @media (max-width: 768px) {
+      .plans-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .plan-card {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="category-header">
+    <div class="container">
+      <h1>
+        Ruta<span>Directa</span>
+      </h1>
+      <p>Elige el plan que mejor se adapte a tus necesidades y llega a más clientes en Buena Fe</p>
+    </div>
+  </header>
+
+  <div class="plans-container">
+    <!-- Plan Básico -->
+    <div class="plan-card basic">
+      <div class="plan-badge">Popular</div>
+      <h2 class="plan-title">Básico</h2>
+      <div class="plan-price">$9<span>/mes</span></div>
+      <ul class="plan-features">
+        <li>Nombre y logo de tu local</li>
+        <li>Hasta 5 productos destacados</li>
+        <li>Horario de atención visible</li>
+        <li>Enlace directo a WhatsApp</li>
+        <li>Aparece en búsquedas básicas</li>
+      </ul>
+      <a href="#" class="plan-button">Seleccionar</a>
+    </div>
+
+    <!-- Plan Premium -->
+    <div class="plan-card premium">
+      <h2 class="plan-title">Premium</h2>
+      <div class="plan-price">$25<span>/mes</span></div>
+      <ul class="plan-features">
+        <li>Todo en Básico</li>
+        <li>Menú completo (hasta 20 productos)</li>
+        <li>Cartel publicitario rotativo</li>
+        <li>Prioridad en búsquedas</li>
+        <li>Sello "Recomendado"</li>
+        <li>Estadísticas básicas</li>
+        <li>1 publicación promocional/mes</li>
+      </ul>
+      <a href="#" class="plan-button">Seleccionar</a>
+    </div>
+
+    <!-- Plan Empresarial -->
+    <div class="plan-card enterprise">
+      <div class="plan-badge">Mejor valor</div>
+      <h2 class="plan-title">Empresarial</h2>
+      <div class="plan-price">$50<span>/mes</span></div>
+      <ul class="plan-features">
+        <li>Todo en Premium</li>
+        <li>Banner permanente en cabecera</li>
+        <li>Menú ilimitado con categorías</li>
+        <li>Video promocional (30 seg)</li>
+        <li>Publicación semanal en redes</li>
+        <li>Estadísticas avanzadas</li>
+        <li>Cupones digitales</li>
+        <li>Soporte premium 24/7</li>
+      </ul>
+      <a href="#" class="plan-button">Seleccionar</a>
+    </div>
+  </div>
+
+  <div class="plan-comparison">
+    <h2 style="text-align: center; margin-bottom: 1.5rem;">Comparación de planes</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Característica</th>
+          <th>Básico</th>
+          <th>Premium</th>
+          <th>Empresarial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Precio mensual</td>
+          <td>$9</td>
+          <td>$25</td>
+          <td>$50</td>
+        </tr>
+        <tr>
+          <td>Productos destacados</td>
+          <td>✓ (5 max)</td>
+          <td>✓ (20 max)</td>
+          <td>✓ (Ilimitados)</td>
+        </tr>
+        <tr>
+          <td>Publicidad visual</td>
+          <td>✗</td>
+          <td>✓ (Rotativo)</td>
+          <td>✓ (Banner fijo)</td>
+        </tr>
+        <tr>
+          <td>Posicionamiento</td>
+          <td>Básico</td>
+          <td>Prioritario</td>
+          <td>Máxima prioridad</td>
+        </tr>
+        <tr>
+          <td>Promoción en redes</td>
+          <td>✗</td>
+          <td>1/mes</td>
+          <td>1/semana</td>
+        </tr>
+        <tr>
+          <td>Soporte</td>
+          <td>Básico</td>
+          <td>Estándar</td>
+          <td>24/7 Premium</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    // Efecto hover mejorado para tarjetas
+    document.querySelectorAll('.plan-card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px)';
+        card.style.boxShadow = '0 10px 25px rgba(0,0,0,0.5)';
+      });
+      
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+  </script>
+</body>
+</html>
