@@ -1,4 +1,4 @@
-const cart = [];
+const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function updateCartUI() {
   const cartList = document.getElementById('cart-list');
@@ -34,6 +34,7 @@ function updateCartUI() {
     cartList.innerHTML = '<li style="text-align:center;color:var(--gray);">Tu carrito está vacío</li>';
     cartTotal.textContent = '';
   }
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function addToCart(name, price, img) {
