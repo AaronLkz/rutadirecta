@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Generador de Tarjetas de Productos</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+  <style>
+    body {
+      background: #18191a;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      padding: 2rem;
+    }
+    h1 {
+      color: #1976d2;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    form {
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 18px;
+      max-width: 500px;
+      margin: 0 auto 2rem auto;
+      box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+    }
+    form label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: none;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+      background: #292929;
+      color: #fff;
+    }
+    form button {
+      margin-top: 1.5rem;
+      background: #1976d2;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    form button:hover {
+      background: #115293;
+    }
+    .preview-area {
+      max-width: 600px;
+      margin: 2rem auto;
+      background: #222;
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(25, 118, 210, 0.10);
+    }
+    .food-item-card {
+      background: #23272b;
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(25, 118, 210, 0.08);
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+    .food-img-ctn {
+      flex: 0 0 90px;
+      padding: 1rem;
+      background: #18191a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+    }
+    .food-img-ctn img {
+      width: 64px;
+      height: 64px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+    }
+    .food-desc-ctn {
+      flex: 1;
+      padding: 1rem;
+    }
+    .food-name {
+      color: #1976d2;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.2rem;
+    }
+    .food-price {
+      color: #25d366;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+    .desc {
+      color: #aaa;
+      font-size: 0.98rem;
+      margin-bottom: 0.5rem;
+    }
+    .add-to-cart-btn {
+      background: #25d366;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .add-to-cart-btn i {
+      margin-right: 0.5rem;
+    }
+    .add-to-cart-btn:hover {
+      background: #1976d2;
+    }
+    textarea {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      background: #18191a;
+      color: #fff;
+      border: 1px solid #333;
+      min-height: 80px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generador de Tarjetas de Productos</h1>
+  <form id="product-form">
+    <label>Nombre del producto
+      <input type="text" id="nombre" required>
+    </label>
+    <label>Precio
+      <input type="number" id="precio" required>
+    </label>
+    <label>Ruta de la imagen
+      <input type="text" id="imagen" value="../../assets/icons/desayuno.png" required>
+    </label>
+    <label>Texto alternativo (alt)
+      <input type="text" id="alt" required>
+    </label>
+    <label>Descripción
+      <textarea id="descripcion" required></textarea>
+    </label>
+    <button type="submit">Agregar producto</button>
+  </form>
+
+  <div class="preview-area">
+    <h2 style="color:#25d366;">Vista previa y código generado</h2>
+    <div id="preview"></div>
+    <label style="margin-top:1.5rem;display:block;">Código HTML generado:</label>
+    <textarea id="codigo" readonly></textarea>
+  </div>
+
+  <script>
+    const form = document.getElementById('product-form');
+    const preview = document.getElementById('preview');
+    const codigo = document.getElementById('codigo');
+    let productos = [];
+
+    function generarHTML(productos) {
+      return productos.map(p => `
+<article class="food-item-card" data-name="${p.nombre}" data-price="${p.precio}">
+  <div class="food-img-ctn">
+    <img src="${p.imagen}" alt="${p.alt}" />
+  </div>
+  <div class="food-desc-ctn">
+    <div class="food-name">${p.nombre}</div>
+    <span class="food-price">$${p.precio}</span>
+    <div class="desc">
+      ${p.descripcion}
+    </div>
+    <button class="add-to-cart-btn">
+      <i class="fa fa-cart-plus"></i> Añadir al carrito
+    </button>
+  </div>
+</article>
+`).join('\n');
+    }
+
+    function render() {
+      preview.innerHTML = generarHTML(productos);
+      codigo.value = generarHTML(productos);
+    }
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const precio = document.getElementById('precio').value.trim();
+      const imagen = document.getElementById('imagen').value.trim();
+      const alt = document.getElementById('alt').value.trim();
+      const descripcion = document.getElementById('descripcion').value.trim();
+
+      productos.push({ nombre, precio, imagen, alt, descripcion });
+      render();
+      form.reset();
+      document.getElementById('imagen').value = "../../assets/icons/desayuno.png";
+    });
+  </script>
+</body>
+</html>
