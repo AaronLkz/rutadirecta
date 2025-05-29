@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function startAuto() {
-    timer = setInterval(nextSlide, 5000);
+    timer = setInterval(nextSlide, 3500);
   }
 
   function stopAuto() {
