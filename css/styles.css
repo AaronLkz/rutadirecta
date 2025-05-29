@@ -309,6 +309,43 @@ footer {
   margin-bottom: 0.5rem;
 }
 
+/* Banner Carrusel y Fijo */
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto 1.5rem auto;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+}
+.banner-slide {
+  display: none;
+  width: 100%;
+  transition: opacity 0.5s;
+}
+.banner-slide.active {
+  display: block;
+}
+.banner-slide img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+.banner-fixed {
+  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+}
+.banner-fixed img {
+  width: 100%;
+  display: block;
+  border-radius: 18px;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .steps {
