@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruta Directa - Almuerzos</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="stylesheet" href="../../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="category-header">
+      <div class="container">
+        <h1>
+          <a
+            href="../../index.html"
+            class="main-title-link"
+            style="text-decoration: none"
+          >
+            Ruta<span>Directa</span>
+          </a>
+        </h1>
+        <p>¡Disfruta los mejores almuerzos para tu día!</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-ctn">
+        <!-- Ejemplo de productos de almuerzos -->
+        <article
+          class="food-item-card"
+          data-name="Arroz con pollo"
+          data-price="45"
+        >
+          <div class="food-img-ctn">
+            <img
+              src="../../assets/icons/arroz-pollo.png"
+              alt="Arroz con pollo"
+            />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Arroz con pollo</div>
+            <span class="food-price">$45</span>
+            <div class="desc">
+              Arroz amarillo con pollo, vegetales y ensalada fresca.
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article
+          class="food-item-card"
+          data-name="Seco de carne"
+          data-price="50"
+        >
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/seco-carne.png" alt="Seco de carne" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Seco de carne</div>
+            <span class="food-price">$50</span>
+            <div class="desc">
+              Tradicional guiso de carne con arroz, menestra y plátano maduro.
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Encebollado" data-price="40">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/encebollado.png" alt="Encebollado" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Encebollado</div>
+            <span class="food-price">$40</span>
+            <div class="desc">
+              Tradicional encebollado ecuatoriano con yuca y pescado.
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article
+          class="food-item-card"
+          data-name="Pollo apanado"
+          data-price="48"
+        >
+          <div class="food-img-ctn">
+            <img
+              src="../../assets/icons/pollo-apanado.png"
+              alt="Pollo apanado"
+            />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Pollo apanado</div>
+            <span class="food-price">$48</span>
+            <div class="desc">
+              Filete de pollo empanizado con arroz, papas y ensalada.
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Carrito flotante -->
+    <div class="cart-float" id="cart-float">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="cart-modal-bg" id="cart-modal-bg">
+      <div class="cart-modal">
+        <button class="close-cart" id="close-cart" title="Cerrar">
+          &times;
+        </button>
+        <h2>Tu carrito</h2>
+        <ul id="cart-list"></ul>
+        <div class="cart-total" id="cart-total"></div>
+        <div class="cart-btns">
+          <button id="clear-cart">Vaciar carrito</button>
+          <button id="checkout-cart">Finalizar pedido</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 RutaDirecta - Buena Fe</p>
+        <a href="#" class="cta-button">¿Eres un local? Únete aquí</a>
+      </div>
+    </footer>
+    <script src="../../js/cart.js"></script>
+  </body>
+</html>
