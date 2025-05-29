@@ -13,13 +13,5 @@ document.addEventListener("DOMContentLoaded", function () {
         this.style.backgroundColor = "var(--light)"; // Vuelve al color original
       });
     });
-
-    // Crear botón flotante de WhatsApp
-    const whatsappBtn = document.createElement("a");
-    whatsappBtn.href =
-      "https://wa.me/521234567890?text=¡Hola!%20Quiero%20hacer%20un%20pedido";
-    whatsappBtn.className = "whatsapp-float";
-    whatsappBtn.innerHTML = '<i class="fab fa-whatsapp"></i>';
-    document.body.appendChild(whatsappBtn);
   }
 });
