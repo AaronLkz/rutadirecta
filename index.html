@@ -1,171 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Ruta Directa - Pedidos en Buena Fe</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/mobile.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    html, body {
-      overscroll-behavior-y: contain;
-      background: var(--darker);
-    }
-  </style>
-</head>
-<body>
-  <header class="category-header">
-    <div class="container">
-      <h1>
-        <a href="../../index.html" class="main-title-link" style="text-decoration:none;">
-          Ruta<span>Directa</span>
-        </a>
-      </h1>
-      <p>Tu encargas, nosotros te lo llevamos</p>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- Banner Rotativo (Carrusel) -->
-    <div class="banner-carousel">
-      <div class="banner-slide active">
-        <img src="assets/banners/banner1.jpg" alt="Promoción 1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Ruta Directa - Pedidos en Buena Fe</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        overscroll-behavior-y: contain;
+        background: var(--darker);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="category-header">
+      <div class="container">
+        <h1>
+          <a
+            href="../../index.html"
+            class="main-title-link"
+            style="text-decoration: none"
+          >
+            Ruta<span>Directa</span>
+          </a>
+        </h1>
+        <p>Tu encargas, nosotros te lo llevamos</p>
       </div>
-      <div class="banner-slide">
-        <img src="assets/banners/banner2.jpg" alt="Promoción 2">
+    </header>
+
+    <main class="container">
+      <!-- Banner Rotativo (Carrusel) -->
+      <div class="banner-carousel">
+        <div class="banner-slide active">
+          <img src="assets/banners/banner1.jpg" alt="Promoción 1" />
+        </div>
+        <div class="banner-slide">
+          <img src="assets/banners/banner2.jpg" alt="Promoción 2" />
+        </div>
+        <div class="banner-slide">
+          <img src="assets/banners/banner3.jpg" alt="Promoción 3" />
+        </div>
       </div>
-      <div class="banner-slide">
-        <img src="assets/banners/banner3.jpg" alt="Promoción 3">
+
+      <!-- Banner Fijo -->
+      <div class="banner-fixed">
+        <img src="assets/banners/banner-fijo.jpg" alt="Banner Fijo" />
       </div>
-    </div>
 
-    <!-- Banner Fijo -->
-    <div class="banner-fixed">
-      <img src="assets/banners/banner-fijo.jpg" alt="Banner Fijo">
-    </div>
+      <section class="categories">
+        <h2>¿Qué quieres pedir hoy?</h2>
+        <div class="carousel">
+          <div class="carousel-content">
+            <!-- Desayunos -->
+            <a href="categorias/desayunos.html" class="category-card">
+              <img src="assets/icons/desayuno.png" alt="Desayunos" />
+              <h3>Desayunos</h3>
+              <p>Desde $2.50</p>
+            </a>
 
-    <section class="categories">
-      <h2>¿Qué quieres pedir hoy?</h2>
-      <div class="carousel">
-        <div class="carousel-content">
+            <!-- Almuerzos -->
+            <a href="categorias/almuerzos.html" class="category-card">
+              <img src="assets/icons/almuerzo.png" alt="Almuerzos" />
+              <h3>Almuerzos</h3>
+              <p>Desde $50</p>
+            </a>
 
-          <!-- Desayunos -->
-          <a href="categorias/desayunos.html" class="category-card">
-            <img src="assets/icons/desayuno.png" alt="Desayunos">
+            <!-- Meriendas -->
+            <a href="categorias/meriendas.html" class="category-card">
+              <img src="assets/icons/merienda.png" alt="Meriendas" />
+              <h3>Meriendas</h3>
+              <p>Desde $25</p>
+            </a>
+
+            <!-- Comida Rápida -->
+            <a href="categorias/comida-rapida.html" class="category-card">
+              <img src="assets/icons/hamburguesa.png" alt="Comida Rápida" />
+              <h3>Comida Rápida</h3>
+              <p>Desde $40</p>
+            </a>
+
+            <!-- Bebidas -->
+            <a href="categorias/bebidas.html" class="category-card">
+              <img src="assets/icons/bebida.png" alt="Bebidas" />
+              <h3>Bebidas</h3>
+              <p>Desde $15</p>
+            </a>
+
+            <!-- Medicinas -->
+            <a href="categorias/farmacias.html" class="category-card">
+              <img src="assets/icons/medicina.png" alt="Farmacias" />
+              <h3>Farmacias</h3>
+              <p>Encarga medicamentos</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Versión móvil -->
+        <div class="mobile-categories">
+          <a href="categorias/desayunos.html" class="mobile-card">
+            <img src="assets/icons/desayuno.png" alt="Desayunos" />
             <h3>Desayunos</h3>
             <p>Desde $2.50</p>
           </a>
 
-          <!-- Almuerzos -->
-          <a href="categorias/almuerzos.html" class="category-card">
-            <img src="assets/icons/almuerzo.png" alt="Almuerzos">
+          <a href="categorias/almuerzos.html" class="mobile-card">
+            <img src="assets/icons/almuerzo.png" alt="Almuerzos" />
             <h3>Almuerzos</h3>
             <p>Desde $50</p>
           </a>
 
-          <!-- Meriendas -->
-          <a href="categorias/meriendas.html" class="category-card">
-            <img src="assets/icons/merienda.png" alt="Meriendas">
+          <a href="categorias/meriendas.html" class="mobile-card">
+            <img src="assets/icons/merienda.png" alt="Meriendas" />
             <h3>Meriendas</h3>
             <p>Desde $25</p>
           </a>
 
-          <!-- Comida Rápida -->
-          <a href="categorias/comida-rapida.html" class="category-card">
-            <img src="assets/icons/hamburguesa.png" alt="Comida Rápida">
+          <a href="categorias/comida-rapida.html" class="mobile-card">
+            <img src="assets/icons/hamburguesa.png" alt="Comida Rápida" />
             <h3>Comida Rápida</h3>
             <p>Desde $40</p>
           </a>
 
-          <!-- Bebidas -->
-          <a href="categorias/bebidas.html" class="category-card">
-            <img src="assets/icons/bebida.png" alt="Bebidas">
+          <a href="categorias/bebidas.html" class="mobile-card">
+            <img src="assets/icons/bebida.png" alt="Bebidas" />
             <h3>Bebidas</h3>
             <p>Desde $15</p>
           </a>
 
-          <!-- Medicinas -->
-          <a href="categorias/farmacias.html" class="category-card">
-            <img src="assets/icons/medicina.png" alt="Farmacias">
+          <a href="categorias/farmacias.html" class="mobile-card">
+            <img src="assets/icons/medicina.png" alt="Farmacias" />
             <h3>Farmacias</h3>
-            <p>Encarga medicamentos</p>
+            <p>Medicamentos</p>
           </a>
-
         </div>
+      </section>
+
+      <section class="how-it-works">
+        <h2>¿Cómo funciona?</h2>
+        <div class="steps">
+          <div class="step">
+            <span>1</span>
+            <p>Elige una categoría</p>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <p>Selecciona tu comida preferida</p>
+          </div>
+          <div class="step">
+            <span>3</span>
+            <p>Habla por WhatsApp</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 RutaDirecta - Buena Fe</p>
+        <a href="../servicios/planes.html" class="cta-button"
+          >¿Eres un local? Únete aquí</a
+        >
       </div>
+    </footer>
 
-          <!-- Versión móvil -->
-      <div class="mobile-categories">
-        <a href="categorias/desayunos.html" class="mobile-card">
-          <img src="assets/icons/desayuno.png" alt="Desayunos">
-          <h3>Desayunos</h3>
-          <p>Desde $2.50</p>
-        </a>
-        
-        <a href="categorias/almuerzos.html" class="mobile-card">
-          <img src="assets/icons/almuerzo.png" alt="Almuerzos">
-          <h3>Almuerzos</h3>
-          <p>Desde $50</p>
-        </a>
-
-        <a href="categorias/meriendas.html" class="mobile-card">
-          <img src="assets/icons/merienda.png" alt="Meriendas">
-          <h3>Meriendas</h3>
-          <p>Desde $25</p>
-        </a>
-
-        <a href="categorias/comida-rapida.html" class="mobile-card">
-          <img src="assets/icons/hamburguesa.png" alt="Comida Rápida">
-          <h3>Comida Rápida</h3>
-          <p>Desde $40</p>
-        </a>
-        
-        <a href="categorias/bebidas.html" class="mobile-card">
-          <img src="assets/icons/bebida.png" alt="Bebidas">
-          <h3>Bebidas</h3>
-          <p>Desde $15</p>
-        </a>
-        
-        <a href="categorias/farmacias.html" class="mobile-card">
-          <img src="assets/icons/medicina.png" alt="Farmacias">
-          <h3>Farmacias</h3>
-          <p>Medicamentos</p>
-        </a>
-        
-      </div>
-    </section>
-
-    <section class="how-it-works">
-      <h2>¿Cómo funciona?</h2>
-      <div class="steps">
-        <div class="step">
-          <span>1</span>
-          <p>Elige una categoría</p>
-        </div>
-        <div class="step">
-          <span>2</span>
-          <p>Selecciona tu comida preferida</p>
-        </div>
-        <div class="step">
-          <span>3</span>
-          <p>Habla por WhatsApp</p>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>© 2025 RutaDirecta - Buena Fe</p>
-      <a href="../servicios/planes.html" class="cta-button">¿Eres un local? Únete aquí</a>
-    </div>
-  </footer>
-
-  <script src="js/script.js"></script>
-  <script src="js/mobile.js"></script>
-  <script src="js/banner.js"></script>
-
-</body>
+    <script src="js/script.js"></script>
+    <script src="js/mobile.js"></script>
+    <script src="js/banner.js"></script>
+  </body>
 </html>

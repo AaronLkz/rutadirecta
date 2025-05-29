@@ -1,13 +1,13 @@
 /* Variables y Reset */
 :root {
-  --primary: #1976D2;   /* Azul zafiro elegante */
-  --secondary: #64B5F6; /* Azul claro sofisticado */
+  --primary: #1976d2; /* Azul zafiro elegante */
+  --secondary: #64b5f6; /* Azul claro sofisticado */
   --dark: #18191a;
   --darker: #111215;
   --light: #23272b;
   --gray: #b0b3b8;
   --white: #fff;
-  --shadow: 0 5px 20px rgba(0,0,0,0.25);
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: var(--darker);
   color: var(--gray);
   line-height: 1.6;
@@ -126,7 +126,7 @@ header h1 span {
   height: 80px;
   object-fit: contain;
   margin-bottom: 1rem;
-  filter: drop-shadow(0 2px 8px rgba(37,211,102,0.08));
+  filter: drop-shadow(0 2px 8px rgba(37, 211, 102, 0.08));
 }
 
 .category-card h3 {
@@ -221,7 +221,7 @@ footer {
   font-weight: bold;
   margin-top: 1rem;
   transition: background 0.3s, color 0.3s;
-  box-shadow: 0 2px 8px rgba(37,211,102,0.10);
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.1);
 }
 
 .cta-button:hover {
@@ -278,7 +278,7 @@ footer {
   max-height: 90px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(25,118,210,0.10);
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.1);
 }
 
 .food-desc-ctn {
@@ -317,7 +317,7 @@ footer {
   margin: 2rem auto 1.5rem auto;
   overflow: hidden;
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.1);
 }
 .banner-slide {
   display: none;
@@ -338,7 +338,7 @@ footer {
   margin: 2rem auto;
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 4px 24px rgba(25,118,210,0.10);
+  box-shadow: 0 4px 24px rgba(25, 118, 210, 0.1);
 }
 .banner-fixed img {
   width: 100%;
@@ -351,7 +351,7 @@ footer {
   .steps {
     flex-direction: column;
   }
-  
+
   .category-card {
     width: 160px;
   }

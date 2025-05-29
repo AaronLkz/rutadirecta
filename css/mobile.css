@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   overscroll-behavior: none;
   background: var(--darker);
 }
@@ -25,7 +26,7 @@ body {
     border-radius: 16px; /* Bordes redondeados */
     width: calc(100% - 24px); /* Ajuste al ancho total */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra suave */
-  
+
     -webkit-tap-highlight-color: transparent;
     user-select: none;
     -webkit-user-select: none;
@@ -42,7 +43,7 @@ body {
     align-items: center;
     text-decoration: none;
     color: var(--white);
-    box-shadow: 0 2px 10px rgba(25,118,210,0.10); /* azul sutil */
+    box-shadow: 0 2px 10px rgba(25, 118, 210, 0.1); /* azul sutil */
     border: 1.5px solid var(--primary);
     transition: transform 0.1s, border 0.2s;
     -webkit-tap-highlight-color: transparent;
@@ -58,7 +59,7 @@ body {
     width: 44px;
     height: 44px;
     margin-bottom: 10px;
-    filter: drop-shadow(0 2px 8px rgba(25,118,210,0.10));
+    filter: drop-shadow(0 2px 8px rgba(25, 118, 210, 0.1));
   }
 
   .mobile-card h3 {
@@ -106,7 +107,7 @@ body {
   .mobile-categories {
     display: none !important;
   }
-  
+
   /* Asegura que los pasos vuelvan a fila en desktop */
   .steps {
     flex-direction: row !important;
@@ -125,7 +126,7 @@ body {
   border-radius: 50px;
   text-align: center;
   font-size: 30px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 100;
   display: flex;
   align-items: center;
