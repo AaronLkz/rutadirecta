@@ -346,6 +346,62 @@ footer {
   border-radius: 18px;
 }
 
+/* Banner en escritorio: más pequeño, alineado y con sombra especial */
+@media (min-width: 1024px) {
+  .banner-carousel,
+  .banner-fixed {
+    max-width: 700px;
+    height: 160px;
+    margin: 3rem auto 2rem auto;
+    border-radius: 32px;
+    box-shadow: 0 8px 40px rgba(25, 118, 210, 0.18), 0 0 0 8px #18191a;
+    /* Puedes agregar más efectos aquí */
+  }
+  .banner-slide img,
+  .banner-fixed img {
+    border-radius: 32px;
+    box-shadow: none;
+  }
+}
+
+/* Banners en fila solo en escritorio */
+@media (min-width: 1024px) {
+  .banners-row {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem auto 2rem auto;
+    max-width: 1500px;
+  }
+  .banners-row .banner-fixed,
+  .banners-row .banner-carousel {
+    flex: 1 1 0;
+    max-width: 700px;
+    height: 160px;
+    margin: 0;
+    border-radius: 32px;
+    box-shadow: 0 8px 40px rgba(25, 118, 210, 0.18), 0 0 0 8px #18191a;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  .banners-row .banner-fixed img,
+  .banners-row .banner-carousel .banner-slide img {
+    border-radius: 32px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: none;
+    display: block;
+  }
+  /* Opcional: oculta los banners fuera de la fila */
+  .banner-fixed:not(.banners-row .banner-fixed),
+  .banner-carousel:not(.banners-row .banner-carousel) {
+    display: none !important;
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .steps {
