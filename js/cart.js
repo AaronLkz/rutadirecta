@@ -79,24 +79,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const checkoutCart = document.getElementById("checkout-cart");
   const checkoutForm = document.getElementById("checkout-form");
   const cartBtns = document.getElementById("cart-btns");
+  const cartContent = document.getElementById("cart-content");
+  const cartModalTitle = document.getElementById("cart-modal-title");
 
   cartFloat.addEventListener("click", () => {
     cartModalBg.style.display = "flex";
     updateCartUI();
-    // Oculta formulario si estaba abierto
+    // Mostrar solo el carrito
+    cartContent.style.display = "";
     checkoutForm.style.display = "none";
-    cartBtns.style.display = "";
+    cartModalTitle.textContent = "Tu carrito";
   });
   closeCart.addEventListener("click", () => {
     cartModalBg.style.display = "none";
+    cartContent.style.display = "";
     checkoutForm.style.display = "none";
-    cartBtns.style.display = "";
+    cartModalTitle.textContent = "Tu carrito";
   });
   cartModalBg.addEventListener("click", (e) => {
     if (e.target === cartModalBg) {
       cartModalBg.style.display = "none";
+      cartContent.style.display = "";
       checkoutForm.style.display = "none";
-      cartBtns.style.display = "";
+      cartModalTitle.textContent = "Tu carrito";
     }
   });
   clearCart.addEventListener("click", () => {
@@ -104,34 +109,36 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCartUI();
   });
 
-  // Mostrar formulario de datos al finalizar pedido
+  // Mostrar formulario de datos al finalizar pedido (reemplaza el carrito)
   checkoutCart.addEventListener("click", () => {
     if (cart.length === 0) return;
+    cartContent.style.display = "none";
     checkoutForm.style.display = "block";
-    cartBtns.style.display = "none";
+    cartModalTitle.textContent = "Finalizar pedido";
   });
 
-  // Cancelar formulario y volver a botones
+  // Cancelar formulario y volver a carrito
   document.getElementById("cancel-checkout").addEventListener("click", () => {
     checkoutForm.style.display = "none";
-    cartBtns.style.display = "";
+    cartContent.style.display = "";
+    cartModalTitle.textContent = "Tu carrito";
   });
 
-  // Enviar pedido por WhatsApp con datos del cliente
+  // Enviar pedido por WhatsApp con datos del cliente (sin emojis)
   checkoutForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const nombre = document.getElementById("cliente-nombre").value.trim();
     const ubicacion = document.getElementById("cliente-ubicacion").value.trim();
     const notas = document.getElementById("cliente-notas").value.trim();
 
-    let msg = `¡Hola! Quiero pedir:\n`;
+    let msg = `Hola! Quiero pedir:\n`;
     cart.forEach((item) => {
       msg += `- ${item.name} x${item.qty} ($${item.price * item.qty})\n`;
     });
     const cartTotal = document.getElementById("cart-total");
     msg += cartTotal.textContent ? `\n${cartTotal.textContent}` : "";
-    msg += `\n\n🧑 Nombre: ${nombre}\n📍 Ubicación: ${ubicacion}`;
-    if (notas) msg += `\n📝 Notas: ${notas}`;
+    msg += `\n\nNombre: ${nombre}\nUbicación: ${ubicacion}`;
+    if (notas) msg += `\nNotas: ${notas}`;
 
     const url = `https://api.whatsapp.com/send?phone=+593991930724&text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
@@ -140,7 +147,8 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("cart-modal-bg").style.display = "none";
     checkoutForm.reset();
     checkoutForm.style.display = "none";
-    cartBtns.style.display = "";
+    cartContent.style.display = "";
+    cartModalTitle.textContent = "Tu carrito";
     cart.length = 0;
     updateCartUI();
   });

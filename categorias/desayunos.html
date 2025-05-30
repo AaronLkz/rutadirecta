@@ -149,14 +149,16 @@
         <button class="close-cart" id="close-cart" title="Cerrar">
           &times;
         </button>
-        <h2>Tu carrito</h2>
-        <ul id="cart-list"></ul>
-        <div class="cart-total" id="cart-total"></div>
-        <div class="cart-btns" id="cart-btns">
-          <button id="clear-cart">Vaciar carrito</button>
-          <button id="checkout-cart">Finalizar pedido</button>
+        <h2 id="cart-modal-title">Tu carrito</h2>
+        <div id="cart-content">
+          <ul id="cart-list"></ul>
+          <div class="cart-total" id="cart-total"></div>
+          <div class="cart-btns" id="cart-btns">
+            <button id="clear-cart">Vaciar carrito</button>
+            <button id="checkout-cart">Finalizar pedido</button>
+          </div>
         </div>
-        <!-- Formulario de datos del cliente -->
+        <!-- Formulario de datos del cliente, oculto por defecto -->
         <form id="checkout-form" style="display:none; margin-top:1.5rem;">
           <h3 style="color:var(--primary);margin-bottom:1rem;">Completa tus datos</h3>
           <input type="text" id="cliente-nombre" placeholder="Tu nombre" required
