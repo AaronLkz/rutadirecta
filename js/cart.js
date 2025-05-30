@@ -77,34 +77,72 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeCart = document.getElementById("close-cart");
   const clearCart = document.getElementById("clear-cart");
   const checkoutCart = document.getElementById("checkout-cart");
+  const checkoutForm = document.getElementById("checkout-form");
+  const cartBtns = document.getElementById("cart-btns");
 
   cartFloat.addEventListener("click", () => {
     cartModalBg.style.display = "flex";
     updateCartUI();
+    // Oculta formulario si estaba abierto
+    checkoutForm.style.display = "none";
+    cartBtns.style.display = "";
   });
   closeCart.addEventListener("click", () => {
     cartModalBg.style.display = "none";
+    checkoutForm.style.display = "none";
+    cartBtns.style.display = "";
   });
   cartModalBg.addEventListener("click", (e) => {
-    if (e.target === cartModalBg) cartModalBg.style.display = "none";
+    if (e.target === cartModalBg) {
+      cartModalBg.style.display = "none";
+      checkoutForm.style.display = "none";
+      cartBtns.style.display = "";
+    }
   });
   clearCart.addEventListener("click", () => {
     cart.length = 0;
     updateCartUI();
   });
+
+  // Mostrar formulario de datos al finalizar pedido
   checkoutCart.addEventListener("click", () => {
     if (cart.length === 0) return;
-    let msg = "¡Hola! Quiero pedir:\n";
+    checkoutForm.style.display = "block";
+    cartBtns.style.display = "none";
+  });
+
+  // Cancelar formulario y volver a botones
+  document.getElementById("cancel-checkout").addEventListener("click", () => {
+    checkoutForm.style.display = "none";
+    cartBtns.style.display = "";
+  });
+
+  // Enviar pedido por WhatsApp con datos del cliente
+  checkoutForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById("cliente-nombre").value.trim();
+    const ubicacion = document.getElementById("cliente-ubicacion").value.trim();
+    const notas = document.getElementById("cliente-notas").value.trim();
+
+    let msg = `¡Hola! Quiero pedir:\n`;
     cart.forEach((item) => {
       msg += `- ${item.name} x${item.qty} ($${item.price * item.qty})\n`;
     });
-    // Obtén el elemento aquí:
     const cartTotal = document.getElementById("cart-total");
     msg += cartTotal.textContent ? `\n${cartTotal.textContent}` : "";
-    const url = `https://api.whatsapp.com/send?phone=+593991930724&text=${encodeURIComponent(
-      msg
-    )}`;
+    msg += `\n\n🧑 Nombre: ${nombre}\n📍 Ubicación: ${ubicacion}`;
+    if (notas) msg += `\n📝 Notas: ${notas}`;
+
+    const url = `https://api.whatsapp.com/send?phone=+593991930724&text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
+
+    // Limpiar y cerrar
+    document.getElementById("cart-modal-bg").style.display = "none";
+    checkoutForm.reset();
+    checkoutForm.style.display = "none";
+    cartBtns.style.display = "";
+    cart.length = 0;
+    updateCartUI();
   });
 
   // Eliminar producto del carrito
