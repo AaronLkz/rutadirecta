@@ -131,13 +131,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const ubicacion = document.getElementById("cliente-ubicacion").value.trim();
     const notas = document.getElementById("cliente-notas").value.trim();
 
-    let msg = `Hola! Quiero pedir:\n`;
+    let msg = `¡Hola! Quiero pedir:\n\n`; // Salto de línea extra aquí
     cart.forEach((item) => {
-      msg += `- ${item.name} x${item.qty} ($${item.price * item.qty})\n`;
+      msg += `${item.name} x${item.qty} ($${item.price * item.qty})\n`; // Sin guion
     });
     const cartTotal = document.getElementById("cart-total");
-    msg += cartTotal.textContent ? `\n${cartTotal.textContent}` : "";
-    msg += `\n\nNombre: ${nombre}\nUbicación: ${ubicacion}`;
+    msg += cartTotal.textContent ? `\n${cartTotal.textContent}\n` : "\n";
+    msg += `\nNombre: ${nombre}\nUbicación: ${ubicacion}`;
     if (notas) msg += `\nNotas: ${notas}`;
 
     const url = `https://api.whatsapp.com/send?phone=+593991930724&text=${encodeURIComponent(msg)}`;
