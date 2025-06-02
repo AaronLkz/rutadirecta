@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ruta Directa - Comida Rápida</title>
+    <title>My Palatto - Ruta Directa</title>
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/mobile.css" />
     <link rel="stylesheet" href="../../css/cart.css" />
@@ -28,52 +28,282 @@
             Ruta<span>Directa</span>
           </a>
         </h1>
-        <p>¡Disfruta la mejor comida rápida en Buena Fe!</p>
+        <p>Menú My Palatto</p>
       </div>
     </header>
 
     <main>
       <div class="menu-ctn">
-        <!-- Ejemplo de productos de comida rápida -->
-        <article
-          class="food-item-card"
-          data-name="Hamburguesa Clásica"
-          data-price="45"
-        >
+        <!-- Desayunos y Snacks -->
+        <article class="food-item-card" data-name="Avena Birche" data-price="2.50">
           <div class="food-img-ctn">
-            <img
-              src="../../assets/icons/hamburguesa.png"
-              alt="Hamburguesa Clásica"
-            />
+            <img src="../../assets/icons/avena.png" alt="Avena Birche" />
           </div>
           <div class="food-desc-ctn">
-            <div class="food-name">Hamburguesa Clásica</div>
-            <span class="food-price">$45</span>
+            <div class="food-name">Avena Birche</div>
+            <span class="food-price">$2.50</span>
             <div class="desc">
-              Jugosa carne de res, queso, lechuga, tomate y salsa especial en
-              pan suave.
+              Avena fría con frutas frescas, semillas y un toque de miel.
             </div>
             <button class="add-to-cart-btn">
               <i class="fa fa-cart-plus"></i> Añadir al carrito
             </button>
           </div>
         </article>
-        <article class="food-item-card" data-name="Salchipapas" data-price="30">
+        <article class="food-item-card" data-name="Parfait de frutas" data-price="2.50">
           <div class="food-img-ctn">
-            <img src="../../assets/icons/salchipapas.png" alt="Salchipapas" />
+            <img src="../../assets/icons/parfait.png" alt="Parfait de frutas" />
           </div>
           <div class="food-desc-ctn">
-            <div class="food-name">Salchipapas</div>
-            <span class="food-price">$30</span>
+            <div class="food-name">Parfait de frutas</div>
+            <span class="food-price">$2.50</span>
             <div class="desc">
-              Papas fritas con salchicha, salsas y queso rallado.
+              Yogurt de Vainilla, manzana, frutilla, durazno, mermelada, granola, frutos secos
             </div>
             <button class="add-to-cart-btn">
               <i class="fa fa-cart-plus"></i> Añadir al carrito
             </button>
           </div>
         </article>
-        <!-- Puedes agregar más productos aquí -->
+        <article class="food-item-card" data-name="Sandwich de pollo a la plancha" data-price="3.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/sandwich-pollo.png" alt="Sandwich de pollo a la plancha" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Sandwich de pollo a la plancha</div>
+            <span class="food-price">$3.00</span>
+            <div class="desc">
+              Pan integral, lechuga, tomate, salsa de la casa, pechuga a la plancha
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Sandwich Americano" data-price="3.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/sandwich-americano.png" alt="Sandwich Americano" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Sandwich Americano</div>
+            <span class="food-price">$3.00</span>
+            <div class="desc">
+              Porción de papa, jamón, vegetales, pepinillos
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Sandwich Palatto" data-price="2.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/sandwich-palatto.png" alt="Sandwich Palatto" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Sandwich Palatto</div>
+            <span class="food-price">$2.00</span>
+            <div class="desc">
+              Queso cheddar, tocino o jamón, pollo, lechuga y tomate
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Sandwich Light" data-price="2.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/sandwich-light.png" alt="Sandwich Light" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Sandwich Light</div>
+            <span class="food-price">$2.50</span>
+            <div class="desc">
+              Pan integral, jamón de pavo, queso blanco, lechuga, tomate, pepinillo, aderezo de yogurt
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Papas locas Palatto" data-price="3.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/papas-locas.png" alt="Papas locas Palatto" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Papas locas Palatto</div>
+            <span class="food-price">$3.50</span>
+            <div class="desc">
+              Queso cheddar, tocino deshidratado, chorizo picante, jalapeño, queso parmesano
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Papi Pollo" data-price="2.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/papi-pollo.png" alt="Papi Pollo" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Papi Pollo</div>
+            <span class="food-price">$2.50</span>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <!-- Hamburguesas -->
+        <article class="food-item-card" data-name="Hamburguesa Sencilla" data-price="2.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/hamburguesa.png" alt="Hamburguesa Sencilla" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Hamburguesa Sencilla</div>
+            <span class="food-price">$2.50</span>
+            <div class="desc">
+              Carne, queso cheddar, lechuga, tomate, salsa de la casa, papas fritas
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Choriburger" data-price="3.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/choriburger.png" alt="Choriburger" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Choriburger</div>
+            <span class="food-price">$3.50</span>
+            <div class="desc">
+              Chorizo, tocino, queso cheddar, lechuga, tomate, salsa de la casa, papas fritas
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Bigburger" data-price="3.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/bigburger.png" alt="Bigburger" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Bigburger</div>
+            <span class="food-price">$3.50</span>
+            <div class="desc">
+              Doble carne, tocino, queso cheddar, lechuga, tomate, salsa de la casa, aceituna, papas fritas
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Hawaiana" data-price="3.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/hawaiana.png" alt="Hawaiana" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Hawaiana</div>
+            <span class="food-price">$3.00</span>
+            <div class="desc">
+              Carne, piña, tocino, queso cheddar, tomate, lechuga
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Vegetales y Jalapeño" data-price="3.75">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/vegetales-jalapeno.png" alt="Vegetales y Jalapeño" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Vegetales y Jalapeño</div>
+            <span class="food-price">$3.75</span>
+            <div class="desc">
+              Pimiento rojo, jalapeños, carne, queso cheddar, tomate, lechuga
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <!-- Otros platos -->
+        <article class="food-item-card" data-name="Alitas" data-price="5.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/alitas.png" alt="Alitas" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Alitas</div>
+            <span class="food-price">$5.50</span>
+            <div class="desc">
+              BBQ, honey mustard, parmesano
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Nachos con carne" data-price="5.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/nachos.png" alt="Nachos con carne" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Nachos con carne</div>
+            <span class="food-price">$5.50</span>
+            <div class="desc">
+              Guacamole, pico de gallo, salsa de queso, salsa de ajo
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Choripan" data-price="4.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/choripan.png" alt="Choripan" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Choripan</div>
+            <span class="food-price">$4.00</span>
+            <div class="desc">
+              Pan, chorizo colombiano, chimichurri de la casa
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Burritos" data-price="2.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/burrito.png" alt="Burritos" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Burritos</div>
+            <span class="food-price">$2.50</span>
+            <div class="desc">
+              Pollo o carne, lechuga, salsa blanca de queso, pico de gallo, guacamole
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Costilla" data-price="5.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/costilla.png" alt="Costilla" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Costilla</div>
+            <span class="food-price">$5.50</span>
+            <div class="desc">
+              Salsa BBQ a la miel o natural, acompañado con papas fritas y ensalada
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
       </div>
     </main>
 
