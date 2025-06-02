@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Palatto - Ruta Directa</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="stylesheet" href="../../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="category-header">
+      <div class="container">
+        <h1>
+          <a
+            href="../../index.html"
+            class="main-title-link"
+            style="text-decoration: none"
+          >
+            Ruta<span>Directa</span>
+          </a>
+        </h1>
+        <p>Menú My Palatto</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-ctn">
+        <!-- Combos -->
+        <article class="food-item-card" data-name="Combo Doble" data-price="5.99">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/combo-doble.png" alt="Combo Doble" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Combo Doble</div>
+            <span class="food-price">$5.99</span>
+            <div class="desc">
+              2 hamburguesas clásicas + una porción de lomito con choclo
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Combo Especial" data-price="9.99">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/combo-especial.png" alt="Combo Especial" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Combo Especial</div>
+            <span class="food-price">$9.99</span>
+            <div class="desc">
+              2 hamburguesas + 2 porciones de lomitos + 2 bebidas
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+
+        <!-- Hamburguesas -->
+        <article class="food-item-card" data-name="Burger Clásica" data-price="1.99">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/burger-clasica.png" alt="Burger Clásica" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Burger Clásica</div>
+            <span class="food-price">$1.99</span>
+            <div class="desc">
+              Carne, queso cheddar y salsa
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Burger Extra Cheddar" data-price="2.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/burger-extra-cheddar.png" alt="Burger Extra Cheddar" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Burger Extra Cheddar</div>
+            <span class="food-price">$2.50</span>
+            <div class="desc">
+              Carne, salsa, pepinillo y extra queso cheddar
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Burger Fried Eggs" data-price="2.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/burger-fried-eggs.png" alt="Burger Fried Eggs" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Burger Fried Eggs</div>
+            <span class="food-price">$2.50</span>
+            <div class="desc">
+              Carne, huevo, medallón de cebolla y salsa BBQ
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Hamburguer Alone" data-price="3.49">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/hamburguer-alone.png" alt="Hamburguer Alone" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Hamburguer Alone</div>
+            <span class="food-price">$3.49</span>
+            <div class="desc">
+              Una carne, tocino, huevo, pepinillos y queso cheddar
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Hamburguesa Especial" data-price="4.99">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/hamburguesa-especial.png" alt="Hamburguesa Especial" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Hamburguesa Especial</div>
+            <span class="food-price">$4.99</span>
+            <div class="desc">
+              Doble carne, tocino, huevo, queso cheddar, salsa BBQ y pepinillos
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Burger Onion Ring" data-price="2.49">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/burger-onion-ring.png" alt="Burger Onion Ring" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Burger Onion Ring</div>
+            <span class="food-price">$2.49</span>
+            <div class="desc">
+              Una carne, tocino, huevo y aros de cebolla caramelizadas
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+
+        <!-- Bebidas -->
+        <article class="food-item-card" data-name="Agua" data-price="0.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/agua.png" alt="Agua" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Agua</div>
+            <span class="food-price">$0.50</span>
+            <div class="desc"></div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Jugos Naturales" data-price="1.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/jugos-naturales.png" alt="Jugos Naturales" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Jugos Naturales</div>
+            <span class="food-price">$1.00</span>
+            <div class="desc"></div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Gaseosa" data-price="0.50">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/gaseosa.png" alt="Gaseosa" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Gaseosa</div>
+            <span class="food-price">$0.50</span>
+            <div class="desc"></div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Gaseosa Grande" data-price="1.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/gaseosa-grande.png" alt="Gaseosa Grande" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Gaseosa Grande</div>
+            <span class="food-price">$1.00</span>
+            <div class="desc"></div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Carrito flotante -->
+    <div class="cart-float" id="cart-float">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="cart-modal-bg" id="cart-modal-bg">
+      <div class="cart-modal">
+        <button class="close-cart" id="close-cart" title="Cerrar">
+          &times;
+        </button>
+        <h2 id="cart-modal-title">Tu carrito</h2>
+        <div id="cart-content">
+          <ul id="cart-list"></ul>
+          <div class="cart-total" id="cart-total"></div>
+          <div class="cart-btns" id="cart-btns">
+            <button id="clear-cart">Vaciar carrito</button>
+            <button id="checkout-cart">Finalizar pedido</button>
+          </div>
+        </div>
+        <!-- Formulario de datos del cliente, oculto por defecto -->
+        <form id="checkout-form" style="display:none; margin-top:1.5rem;">
+          <h3 style="color:var(--primary);margin-bottom:1rem;">Completa tus datos
+          </h3>
+          <input
+            type="text"
+            id="cliente-nombre"
+            placeholder="Tu nombre"
+            required
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;"
+          />
+          <input
+            type="text"
+            id="cliente-ubicacion"
+            placeholder="Tu ubicación o dirección"
+            required
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;"
+          />
+          <textarea
+            id="cliente-notas"
+            placeholder="Notas adicionales (opcional)"
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;min-height:60px;margin-bottom:1rem;"
+          ></textarea>
+          <div class="cart-btns" style="margin-top:1rem;">
+            <button type="button" id="cancel-checkout">Cancelar</button>
+            <button type="submit" id="confirm-checkout">Enviar pedido</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 RutaDirecta - Buena Fe</p>
+        <a href="#" class="cta-button">¿Eres un local? Únete aquí</a>
+      </div>
+    </footer>
+    <script src="../../js/cart.js"></script>
+  </body>
+</html>
