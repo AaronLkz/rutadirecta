@@ -29,7 +29,7 @@ function updateCartUI() {
     cartList.appendChild(li);
   });
   cartCount.textContent = cart.reduce((acc, item) => acc + item.qty, 0);
-  cartTotal.textContent = total > 0 ? `Total: $${total}` : "";
+  cartTotal.textContent = total > 0 ? `Total: $${total.toFixed(2)}` : "";
   if (cart.length === 0) {
     cartList.innerHTML =
       '<li style="text-align:center;color:var(--gray);">Tu carrito está vacío</li>';
