@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ruta Directa - Sodas</title>
+    <title>Ice Bubble Soda - Sodas, Lattes, Lemons y Teas</title>
     <link rel="stylesheet" href="../../css/styles.css" />
     <link rel="stylesheet" href="../../css/mobile.css" />
     <link rel="stylesheet" href="../../css/cart.css" />
@@ -28,80 +28,77 @@
             Ruta<span>Directa</span>
           </a>
         </h1>
-        <p>¡Refresca tu día con nuestras sodas!</p>
+        <p>Ice Bubble Soda - Sodas heladas, lattes, lemons y teas</p>
       </div>
     </header>
 
     <main>
       <div class="menu-ctn">
-        <!-- Ejemplo de productos de sodas -->
-        <article
-          class="food-item-card"
-          data-name="Coca-Cola 500ml"
-          data-price="18"
-        >
+        <!-- Soda Helada -->
+        <article class="food-item-card" data-name="Soda Helada Blueberry" data-price="22">
           <div class="food-img-ctn">
-            <img
-              src="../../assets/icons/cocacola.png"
-              alt="Coca-Cola 500ml"
-            />
+            <img src="../../assets/icons/soda-blueberry.png" alt="Soda Helada Blueberry" />
           </div>
           <div class="food-desc-ctn">
-            <div class="food-name">Coca-Cola 500ml</div>
-            <span class="food-price">$18</span>
+            <div class="food-name">Soda Helada Blueberry</div>
+            <span class="food-price">$22</span>
             <div class="desc">
-              Refresco clásico, botella de 500ml bien fría.
+              Refrescante soda helada sabor blueberry con burbujas y hielo.
             </div>
             <button class="add-to-cart-btn">
               <i class="fa fa-cart-plus"></i> Añadir al carrito
             </button>
           </div>
         </article>
-        <article
-          class="food-item-card"
-          data-name="Sprite 500ml"
-          data-price="18"
-        >
+        <!-- Latte -->
+        <article class="food-item-card" data-name="Latte Vainilla" data-price="25">
           <div class="food-img-ctn">
-            <img
-              src="../../assets/icons/sprite.png"
-              alt="Sprite 500ml"
-            />
+            <img src="../../assets/icons/latte-vainilla.png" alt="Latte Vainilla" />
           </div>
           <div class="food-desc-ctn">
-            <div class="food-name">Sprite 500ml</div>
-            <span class="food-price">$18</span>
+            <div class="food-name">Latte Vainilla</div>
+            <span class="food-price">$25</span>
             <div class="desc">
-              Refresco de limón, botella de 500ml.
+              Café latte frío con esencia de vainilla y leche cremosa.
             </div>
             <button class="add-to-cart-btn">
               <i class="fa fa-cart-plus"></i> Añadir al carrito
             </button>
           </div>
         </article>
-        <article
-          class="food-item-card"
-          data-name="Fanta Naranja 500ml"
-          data-price="18"
-        >
+        <!-- Lemon -->
+        <article class="food-item-card" data-name="Lemon Passion" data-price="20">
           <div class="food-img-ctn">
-            <img
-              src="../../assets/icons/fanta.png"
-              alt="Fanta Naranja 500ml"
-            />
+            <img src="../../assets/icons/lemon-passion.png" alt="Lemon Passion" />
           </div>
           <div class="food-desc-ctn">
-            <div class="food-name">Fanta Naranja 500ml</div>
-            <span class="food-price">$18</span>
+            <div class="food-name">Lemon Passion</div>
+            <span class="food-price">$20</span>
             <div class="desc">
-              Refresco sabor naranja, botella de 500ml.
+              Limonada con maracuyá, hielo y un toque de menta fresca.
             </div>
             <button class="add-to-cart-btn">
               <i class="fa fa-cart-plus"></i> Añadir al carrito
             </button>
           </div>
         </article>
-        <!-- Más productos aquí -->
+        <!-- Tea -->
+        <article class="food-item-card" data-name="Tea de Durazno" data-price="18">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/tea-durazno.png" alt="Tea de Durazno" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Tea de Durazno</div>
+            <span class="food-price">$18</span>
+            <div class="desc">
+              Té frío sabor durazno, endulzado y servido con hielo.
+            </div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <!-- Puedes agregar más productos aquí -->
       </div>
     </main>
 
@@ -128,13 +125,27 @@
         </div>
         <!-- Formulario de datos del cliente, oculto por defecto -->
         <form id="checkout-form" style="display:none; margin-top:1.5rem;">
-          <h3 style="color:var(--primary);margin-bottom:1rem;">Completa tus datos</h3>
-          <input type="text" id="cliente-nombre" placeholder="Tu nombre" required
-            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;">
-          <input type="text" id="cliente-ubicacion" placeholder="Tu ubicación o dirección" required
-            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;">
-          <textarea id="cliente-notas" placeholder="Notas adicionales (opcional)"
-            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;min-height:60px;margin-bottom:1rem;"></textarea>
+          <h3 style="color:var(--primary);margin-bottom:1rem;">Completa tus datos
+          </h3>
+          <input
+            type="text"
+            id="cliente-nombre"
+            placeholder="Tu nombre"
+            required
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;"
+          />
+          <input
+            type="text"
+            id="cliente-ubicacion"
+            placeholder="Tu ubicación o dirección"
+            required
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;"
+          />
+          <textarea
+            id="cliente-notas"
+            placeholder="Notas adicionales (opcional)"
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;min-height:60px;margin-bottom:1rem;"
+          ></textarea>
           <div class="cart-btns" style="margin-top:1rem;">
             <button type="button" id="cancel-checkout">Cancelar</button>
             <button type="submit" id="confirm-checkout">Enviar pedido</button>
