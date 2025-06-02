@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Locales - Ruta Directa</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="category-header">
+      <div class="container">
+        <h1>
+          <a href="../index.html" class="main-title-link" style="text-decoration: none">
+            Ruta<span>Directa</span>
+          </a>
+        </h1>
+        <p>Tu encargas, nosotros te lo llevamos</p>
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="locales-header" style="text-align:center; margin-top:2rem; margin-bottom:1rem;">
+        <h2>Locales disponibles</h2>
+        <p>Encuentra tu local favorito y haz tu pedido</p>
+      </div>
+      <div class="locales-search" style="display:flex; justify-content:center; margin-bottom:2rem;">
+        <input type="text" id="search-local" placeholder="Buscar local..." oninput="filtrarLocales()" style="width:320px;max-width:90vw;padding:0.7rem 1rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;box-shadow:0 2px 8px rgba(25,118,210,0.08);" />
+      </div>
+      <div class="locales-list" id="locales-list">
+        <!-- Ejemplo de local -->
+        <div class="local-card" data-nombre="My Palatto">
+          <img src="assets/locales/mypalatto.jpg" alt="My Palatto" />
+          <h3>My Palatto</h3>
+          <p>Comida rápida, postres y más</p>
+          <div class="local-actions">
+            <a href="mypalatto.html">Ver menú</a>
+          </div>
+        </div>
+        <div class="local-card" data-nombre="Presley">
+          <img src="assets/locales/presley.jpg" alt="Presley" />
+          <h3>Presley</h3>
+          <p>Pizzas, hamburguesas y más</p>
+          <div class="local-actions">
+            <a href="presley.html">Ver menú</a>
+          </div>
+        </div>
+        <div class="local-card" data-nombre="La Esquina Verde">
+          <img src="assets/locales/laesquinaverde.jpg" alt="La Esquina Verde" />
+          <h3>La Esquina Verde</h3>
+          <p>Ensaladas, jugos naturales y opciones saludables</p>
+          <div class="local-actions">
+            <a href="laesquinaverde.html">Ver menú</a>
+          </div>
+        </div>
+        <!-- Agrega más locales aquí -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 RutaDirecta - Buena Fe</p>
+        <a href="../servicios/planes.html" class="cta-button">¿Eres un local? Únete aquí</a>
+      </div>
+    </footer>
+
+    <script>
+      function filtrarLocales() {
+        const input = document.getElementById('search-local').value.toLowerCase();
+        document.querySelectorAll('.local-card').forEach(card => {
+          const nombre = card.getAttribute('data-nombre').toLowerCase();
+          card.style.display = nombre.includes(input) ? '' : 'none';
+        });
+      }
+    </script>
+  </body>
+</html>
