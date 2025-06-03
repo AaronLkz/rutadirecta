@@ -143,6 +143,30 @@ document.addEventListener("DOMContentLoaded", () => {
     const url = `https://api.whatsapp.com/send?phone=+593991930724&text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
 
+    // Después de enviar a WhatsApp
+    fetch("TU_URL_WEBAPP", {
+      method: "POST",
+      body: JSON.stringify({
+        nombre,
+        ubicacion,
+        notas,
+        productos: cart
+          .map(
+            (item) =>
+              `- ${item.name} x${item.qty} ($${(item.price * item.qty).toFixed(
+                2
+              )})`
+          )
+          .join("\n"),
+        total: cart
+          .reduce((acc, item) => acc + item.price * item.qty, 0)
+          .toFixed(2),
+      }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
     // Limpiar y cerrar
     document.getElementById("cart-modal-bg").style.display = "none";
     checkoutForm.reset();
