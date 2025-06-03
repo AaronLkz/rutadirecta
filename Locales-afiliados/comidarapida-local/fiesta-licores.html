@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiesta Licores y Piqueos - Ruta Directa</title>
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/mobile.css" />
+    <link rel="stylesheet" href="../../css/cart.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header class="category-header">
+      <div class="container">
+        <h1>
+          <a
+            href="../../index.html"
+            class="main-title-link"
+            style="text-decoration: none"
+          >
+            Ruta<span>Directa</span>
+          </a>
+        </h1>
+        <p>Menú Fiesta Licores y Piqueos</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="menu-ctn">
+        <!-- Productos de ejemplo -->
+        <article class="food-item-card" data-name="Ejemplo 1" data-price="1.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/ejemplo1.png" alt="Ejemplo 1" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Ejemplo 1</div>
+            <span class="food-price">$1.00</span>
+            <div class="desc">Descripción del producto 1</div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Ejemplo 2" data-price="2.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/ejemplo2.png" alt="Ejemplo 2" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Ejemplo 2</div>
+            <span class="food-price">$2.00</span>
+            <div class="desc">Descripción del producto 2</div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Ejemplo 3" data-price="3.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/ejemplo3.png" alt="Ejemplo 3" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Ejemplo 3</div>
+            <span class="food-price">$3.00</span>
+            <div class="desc">Descripción del producto 3</div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Ejemplo 4" data-price="4.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/ejemplo4.png" alt="Ejemplo 4" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Ejemplo 4</div>
+            <span class="food-price">$4.00</span>
+            <div class="desc">Descripción del producto 4</div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+        <article class="food-item-card" data-name="Ejemplo 5" data-price="5.00">
+          <div class="food-img-ctn">
+            <img src="../../assets/icons/ejemplo5.png" alt="Ejemplo 5" />
+          </div>
+          <div class="food-desc-ctn">
+            <div class="food-name">Ejemplo 5</div>
+            <span class="food-price">$5.00</span>
+            <div class="desc">Descripción del producto 5</div>
+            <button class="add-to-cart-btn">
+              <i class="fa fa-cart-plus"></i> Añadir al carrito
+            </button>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- Carrito flotante -->
+    <div class="cart-float" id="cart-float">
+      <i class="fa fa-shopping-cart"></i>
+      <span class="cart-count" id="cart-count">0</span>
+    </div>
+
+    <!-- Modal del carrito -->
+    <div class="cart-modal-bg" id="cart-modal-bg">
+      <div class="cart-modal">
+        <button class="close-cart" id="close-cart" title="Cerrar">
+          &times;
+        </button>
+        <h2 id="cart-modal-title">Tu carrito</h2>
+        <div id="cart-content">
+          <ul id="cart-list"></ul>
+          <div class="cart-total" id="cart-total"></div>
+          <div class="cart-btns" id="cart-btns">
+            <button id="clear-cart">Vaciar carrito</button>
+            <button id="checkout-cart">Finalizar pedido</button>
+          </div>
+        </div>
+        <!-- Formulario de datos del cliente, oculto por defecto -->
+        <form id="checkout-form" style="display:none; margin-top:1.5rem;">
+          <h3 style="color:var(--primary);margin-bottom:1rem;">Completa tus datos
+          </h3>
+          <input
+            type="text"
+            id="cliente-nombre"
+            placeholder="Tu nombre"
+            required
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;"
+          />
+          <input
+            type="text"
+            id="cliente-ubicacion"
+            placeholder="Tu ubicación o dirección"
+            required
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;margin-bottom:1rem;"
+          />
+          <textarea
+            id="cliente-notas"
+            placeholder="Notas adicionales (opcional)"
+            style="width:100%;padding:0.7rem;border-radius:8px;border:none;font-size:1rem;background:#23272b;color:#fff;min-height:60px;margin-bottom:1rem;"
+          ></textarea>
+          <div class="cart-btns" style="margin-top:1rem;">
+            <button type="button" id="cancel-checkout">Cancelar</button>
+            <button type="submit" id="confirm-checkout">Enviar pedido</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>© 2025 RutaDirecta - Buena Fe</p>
+        <a href="#" class="cta-button">¿Eres un local? Únete aquí</a>
+      </div>
+    </footer>
+    <script src="../../js/cart.js"></script>
+  </body>
+</html>
