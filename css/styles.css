@@ -475,10 +475,10 @@ footer {
 }
 
 .local-card img {
-  width: 120px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 12px; /* Igual que los productos */
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  border-radius: 50%;      /* Esto los hace circulares */
   margin-bottom: 1rem;
   border: none;
   background: #fff;
