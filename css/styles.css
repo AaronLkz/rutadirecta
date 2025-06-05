@@ -539,3 +539,18 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 0;
 }
+
+.menu-section-title {
+  text-align: center;
+  color: var(--primary); /* Usa el azul principal del sitio */
+  font-size: 2rem;
+  margin: 2.5rem 0 1.2rem 0;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(25, 118, 210, 0.10);
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.3em;
+  background: linear-gradient(90deg, rgba(25,118,210,0.10) 0%, rgba(24,25,26,0.85) 100%);
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+}
